@@ -131,7 +131,7 @@ export default function Navbar() {
           onClick={() => setResumeOpen(false)}
         >
           <div
-            className="relative flex h-[100dvh] w-[100vw] flex-col overflow-hidden bg-[#222] shadow-2xl sm:h-[95vh] sm:w-auto sm:max-w-[95vw] sm:rounded-2xl sm:[aspect-ratio:8.5/11.5]"
+            className="relative flex h-[100dvh] w-[100vw] flex-col overflow-hidden bg-[#222] shadow-2xl sm:h-[95vh] sm:w-[700px] sm:max-w-[95vw] sm:rounded-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button — absolute on mobile so it doesn't shift the PDF */}
@@ -145,18 +145,128 @@ export default function Navbar() {
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </button>
-            {/* PDF Embed + Download */}
-            <div className="flex flex-1 flex-col items-center justify-center overflow-hidden px-1 sm:px-4">
-              <iframe
-                src="/resume.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit"
-                className="w-full sm:h-full"
-                style={{ aspectRatio: "8.5 / 11" }}
-                title="Resume"
-              />
-              <div className="shrink-0 flex items-center justify-center px-6 py-3">
+            {/* Resume Content */}
+            <div className="flex-1 overflow-y-auto px-5 pb-8 pt-16 sm:px-8 sm:pt-2 sm:pb-10">
+              {/* Header */}
+              <div className="border-b border-zinc-700/50 pb-5">
+                <h2 className="text-2xl font-bold text-[#f5f5f5] sm:text-3xl">Franklin Huynh</h2>
+                <p className="mt-1 text-base text-zinc-400">Product Designer</p>
+                <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-zinc-500">
+                  <span>franklinhuynh.com</span>
+                  <span>frankhuynhs@gmail.com</span>
+                  <span>/in/huynhfranklin</span>
+                  <span>(253) 355-3311</span>
+                </div>
+                <p className="mt-3 text-base leading-relaxed text-zinc-400">
+                  5+ years designing in consumer facing roles across e-commerce and retail experiences for web and app.
+                </p>
+              </div>
+
+              {/* Work Experience */}
+              <div className="mt-5">
+                <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-500">Work Experience</h3>
+
+                <div className="mt-4 space-y-5">
+                  <div>
+                    <div className="flex items-baseline justify-between gap-2">
+                      <p className="text-base font-bold text-[#f5f5f5]">Chewy</p>
+                      <span className="shrink-0 text-sm text-zinc-500">Jan 2025 – Present</span>
+                    </div>
+                    <p className="text-sm font-medium text-zinc-400">Product Designer, Pet Health</p>
+                    <p className="mt-1.5 text-sm leading-relaxed text-zinc-500">
+                      Leading design strategy for Chewy Vet Care&apos;s suite of products and crafting platforms that integrate e-commerce with healthcare (running prescriptions, appointment scheduling, and pet health records).
+                    </p>
+                  </div>
+
+                  <div>
+                    <div className="flex items-baseline justify-between gap-2">
+                      <p className="text-base font-bold text-[#f5f5f5]">Walmart</p>
+                      <span className="shrink-0 text-sm text-zinc-500">Jun 2023 – Dec 2024</span>
+                    </div>
+                    <p className="text-sm font-medium text-zinc-400">UX Designer III, Search &amp; Discovery</p>
+                    <ul className="mt-1.5 space-y-1.5 text-sm leading-relaxed text-zinc-500">
+                      <li>Led design for 1 of 5 generative AI design investments using LLMs that launched in 4 months from concept to production, resulting in +2.62% lift in add to carts and +1.1% lift in conversion.</li>
+                      <li>Collaborated closely with product to support the launch and onboarding UX of E2E strategy for our GenAI experiences on app featured in CES 2024.</li>
+                      <li>Responsible for typeahead roadmap and experiences on Walmart e-commerce and contributed to core search, item tile, and fashion roadmaps.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div className="flex items-baseline justify-between gap-2">
+                      <p className="text-base font-bold text-[#f5f5f5]">Nordstrom</p>
+                      <span className="shrink-0 text-sm text-zinc-500">May 2022 – Dec 2022</span>
+                    </div>
+                    <p className="text-sm font-medium text-zinc-400">UX Designer II, Fulfillment CX</p>
+                    <ul className="mt-1.5 space-y-1.5 text-sm leading-relaxed text-zinc-500">
+                      <li>Led mid-large scaled fulfillment solutions, including the launch of the Stores tab on app that brought +24k new and unique customers using our services across Nordstrom and Nordstrom Rack in first month of launch.</li>
+                      <li>Defined and owned the short and long-term roadmap for omni-channel cx, working strategically and thoughtfully with product, engineering and other cross-functional teams.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div className="flex items-baseline justify-between gap-2">
+                      <p className="text-base font-bold text-[#f5f5f5]">Nordstrom</p>
+                      <span className="shrink-0 text-sm text-zinc-500">Nov 2020 – May 2022</span>
+                    </div>
+                    <p className="text-sm font-medium text-zinc-400">UX Designer, Fulfillment &amp; Returns</p>
+                    <ul className="mt-1.5 space-y-1.5 text-sm leading-relaxed text-zinc-500">
+                      <li>Designed comprehensive solutions and influenced fulfillment and return initiatives that guided our customers across the purchase and post-purchase fulfillment funnel for Web, iOS, and Android app.</li>
+                      <li>Expanded customer control options for pickup order deadlines, resulting in +11.1M top line revenue for store pickups.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div className="flex items-baseline justify-between gap-2">
+                      <p className="text-base font-bold text-[#f5f5f5]">Best Buy</p>
+                      <span className="shrink-0 text-sm text-zinc-500">Jun 2019 – Sep 2019</span>
+                    </div>
+                    <p className="text-sm font-medium text-zinc-400">UX Design Intern, Mobile Apps</p>
+                    <ul className="mt-1.5 space-y-1.5 text-sm leading-relaxed text-zinc-500">
+                      <li>Led several projects across the Support and Browse portfolio of the Best Buy app, resulting in +8% appointments booked, 60% less negative reviews around tech support awareness, and improving way-finding for browse journeys that led to +4% conversion on app.</li>
+                      <li>Conducted research including usability testing, heat mapping, behavioral mapping and other forms of research discovery to inform design directions with product, QA, research, content design, and engineers.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Skills */}
+              <div className="mt-6 border-t border-zinc-700/50 pt-5">
+                <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-500">Skills &amp; Processes</h3>
+                <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <div>
+                    <p className="text-sm font-bold text-zinc-400">Strengths</p>
+                    <p className="mt-1 text-sm leading-relaxed text-zinc-500">iOS, Web, and Android, Product thinking, Interaction and Visual design, Strategy, Research, E-commerce and Retail</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-zinc-400">Tools</p>
+                    <p className="mt-1 text-sm leading-relaxed text-zinc-500">Figma/Make, Claude, ChatGPT, Cursor, Lovable, FigJam, Protopie, Usertesting.com, Dscout, Jira, Confluence, Pen and Paper</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-zinc-400">Design artifacts</p>
+                    <p className="mt-1 text-sm leading-relaxed text-zinc-500">Design charrettes, Sketches, User and task flows, Service blueprints, Journey maps, Personas, Wireframes, Information architecture, Prototypes, High fidelity mock-ups, Design systems, Documentation and guidelines, Accessibility, UX roadmaps, Product vision and strategy</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-zinc-400">Research artifacts</p>
+                    <p className="mt-1 text-sm leading-relaxed text-zinc-500">Interviews, Heuristic evaluations, User research, Task analysis, Usability studies, Contextual inquiries, Behavioral mapping, Surveys, Literature reviews</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Education */}
+              <div className="mt-6 border-t border-zinc-700/50 pt-5">
+                <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-500">Education</h3>
+                <div className="mt-3">
+                  <p className="text-base font-bold text-[#f5f5f5]">University of Washington</p>
+                  <p className="mt-0.5 text-sm text-zinc-400">(B.S.) Human-Centered Design &amp; Engineering</p>
+                  <p className="text-sm text-zinc-500">Focus: Human-Computer Interaction</p>
+                </div>
+              </div>
+
+              {/* Download */}
+              <div className="mt-6 flex items-center justify-center pt-2">
                 <a
                   href="/resume.pdf"
-                  download
+                  download="Franklin Huynh Resume.pdf"
                   className="flex items-center gap-2 rounded-full border border-zinc-600 px-5 py-2 text-sm font-medium text-zinc-300 transition-all duration-200 hover:border-zinc-400 hover:text-white"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -164,7 +274,7 @@ export default function Navbar() {
                     <polyline points="7 10 12 15 17 10" />
                     <line x1="12" y1="15" x2="12" y2="3" />
                   </svg>
-                  Download
+                  Download PDF
                 </a>
               </div>
             </div>
