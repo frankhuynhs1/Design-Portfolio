@@ -429,7 +429,7 @@ export default function Home() {
               ))}
             </h1>
             <p className="mt-3 whitespace-nowrap text-[11.5px] sm:text-lg text-[#f5f5f5]">
-              Product Thinking • Visual and Interaction Design • Design Systems
+              Product Thinking • Visual and Interaction Design • Design Systems • AI
             </p>
             <p className="mt-8 max-w-xl text-base sm:text-lg leading-7 text-[#f5f5f5]">
               5+ years design experience in e-commerce + consumer facing roles for iOS, Android, and Web across mobile, tablet, desktop devices.
