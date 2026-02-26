@@ -84,13 +84,13 @@ export default function NordstromStoresServices() {
 
         {/* Metrics */}
         <section className="pb-10 sm:pb-10">
-          <div className="grid grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-3 gap-2 sm:gap-6">
             {metrics.map((m, i) => (
-              <div key={i} className="rounded-2xl bg-[#222222] p-5 sm:p-6">
-                <p className="text-2xl font-bold text-green-400 sm:text-3xl">
+              <div key={i} className="rounded-2xl bg-[#222222] p-3 sm:p-6">
+                <p className="text-lg font-bold text-green-400 sm:text-3xl">
                   <AnimatedMetric prefix={m.prefix} num={m.num} suffix={m.suffix} />
                 </p>
-                <p className="mt-2 text-sm leading-5 text-[#888]">{m.label}</p>
+                <p className="mt-1 text-xs leading-4 text-[#888] sm:mt-2 sm:text-sm sm:leading-5">{m.label}</p>
               </div>
             ))}
           </div>
@@ -320,7 +320,7 @@ export default function NordstromStoresServices() {
           {/* Visual comparison */}
           <div className="relative mt-14 flex gap-3 sm:gap-5">
             {/* Option A */}
-            <div className="group/optA flex flex-1 flex-col items-center">
+            <div className="group/optA flex min-w-0 flex-1 flex-col items-center">
               {/* Tab label preview */}
               <div className="mb-6 flex items-center gap-2 rounded-full border border-zinc-700/50 px-4 py-1.5">
                 <span className="text-xs font-bold tracking-wider text-[#f5f5f5]">TAB:</span>
@@ -425,7 +425,7 @@ export default function NordstromStoresServices() {
             </div>
 
             {/* Option B */}
-            <div className="group/optB flex flex-1 flex-col items-center">
+            <div className="group/optB flex min-w-0 flex-1 flex-col items-center">
               {/* Tab label preview */}
               <div className="mb-6 flex items-center gap-2 rounded-full border border-zinc-700/50 px-4 py-1.5">
                 <span className="text-xs font-bold tracking-wider text-[#f5f5f5]">TAB:</span>
@@ -511,7 +511,7 @@ export default function NordstromStoresServices() {
               <p className="mt-3 text-base leading-7 text-[#b3b3b3]">
                 Our long term goal for the new tab will be to provide convenience for our customers. Customers want to engage with their pickup and purchase experience to be efficient and convenient.
               </p>
-              <div className="relative left-1/2 mt-6 w-[75vw] -translate-x-1/2 overflow-hidden rounded-xl">
+              <div className="mt-6 overflow-hidden rounded-xl sm:relative sm:left-1/2 sm:w-[75vw] sm:-translate-x-1/2">
                 <Image src="/projects/nordstrom-stores/next.png" alt="Pickup experience next steps" width={1920} height={1080} className="w-full" quality={90} unoptimized />
               </div>
             </div>
@@ -520,7 +520,7 @@ export default function NordstromStoresServices() {
               <p className="mt-3 text-base leading-7 text-[#b3b3b3]">
                 We want to ensure that customers are connected to our brands and can engage with them to look good and feel their best. These features will allow customers to engage with services and promotions.
               </p>
-              <div className="relative left-1/2 mt-6 flex w-[75vw] -translate-x-1/2 flex-col gap-4">
+              <div className="mt-6 flex flex-col gap-4 sm:relative sm:left-1/2 sm:w-[75vw] sm:-translate-x-1/2">
                 <div className="overflow-hidden rounded-xl">
                   <Image src="/projects/nordstrom-stores/next2.png" alt="Services and brand connection 1" width={1920} height={1080} className="w-full" quality={90} unoptimized />
                 </div>
@@ -543,13 +543,13 @@ export default function NordstromStoresServices() {
           <p className="mt-4 text-base leading-7 text-[#b3b3b3]">
             We migrated our existing Store Hub experience from the home page widget as a new tab, offering a bigger presence of our digital and in-store services offerings and building upon our vision of convenience and connection for our customers.
           </p>
-          <div className="mt-8 grid grid-cols-3 gap-4 sm:gap-6">
+          <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-6">
             {metrics.map((m, i) => (
-              <div key={i} className="rounded-2xl bg-[#222222] p-5 sm:p-6">
-                <p className="text-2xl font-bold text-green-400 sm:text-3xl">
+              <div key={i} className="rounded-2xl bg-[#222222] p-3 sm:p-6">
+                <p className="text-lg font-bold text-green-400 sm:text-3xl">
                   <AnimatedMetric prefix={m.prefix} num={m.num} suffix={m.suffix} />
                 </p>
-                <p className="mt-2 text-sm leading-5 text-[#888]">{m.label}</p>
+                <p className="mt-1 text-xs leading-4 text-[#888] sm:mt-2 sm:text-sm sm:leading-5">{m.label}</p>
               </div>
             ))}
           </div>
@@ -560,12 +560,21 @@ export default function NordstromStoresServices() {
           <h2 className="text-2xl font-bold text-[#f5f5f5] sm:text-3xl">
             The team behind the magic
           </h2>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-6 hidden flex-wrap gap-3 sm:flex">
             {teamMembers.map((member, i) => (
               <span key={i} className="rounded-full bg-[#222222] px-4 py-2 text-sm text-[#b3b3b3]">
                 👤 {member}
               </span>
             ))}
+          </div>
+          <div className="mt-6 -mx-5 overflow-x-auto sm:hidden" style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}>
+            <div className="grid grid-rows-2 grid-flow-col gap-2 px-5 w-max">
+              {teamMembers.map((member, i) => (
+                <span key={i} className="whitespace-nowrap rounded-full bg-[#222222] px-4 py-2 text-sm text-[#b3b3b3]">
+                  👤 {member}
+                </span>
+              ))}
+            </div>
           </div>
         </section>
 

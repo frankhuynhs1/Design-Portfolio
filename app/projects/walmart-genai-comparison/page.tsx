@@ -330,8 +330,8 @@ export default function WalmartGenAIComparison() {
                     <span aria-hidden className="pointer-events-none absolute inset-0 rounded-full">
                       <span className="absolute inset-0 rounded-full bg-[#1d1d1d] mix-blend-plus-lighter" />
                       <span className="absolute inset-0 rounded-full bg-[rgba(29,29,29,0.2)] mix-blend-color-burn" />
-                      <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter" />
-                      <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[12px]" />
+                      <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter opacity-40 sm:opacity-100" />
+                      <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[6px] sm:backdrop-blur-[12px]" />
                     </span>
                     <svg className="relative z-10" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="m15 18-6-6 6-6" />
@@ -348,8 +348,8 @@ export default function WalmartGenAIComparison() {
                     <span aria-hidden className="pointer-events-none absolute inset-0 rounded-full">
                       <span className="absolute inset-0 rounded-full bg-[#1d1d1d] mix-blend-plus-lighter" />
                       <span className="absolute inset-0 rounded-full bg-[rgba(29,29,29,0.2)] mix-blend-color-burn" />
-                      <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter" />
-                      <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[12px]" />
+                      <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter opacity-40 sm:opacity-100" />
+                      <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[6px] sm:backdrop-blur-[12px]" />
                     </span>
                     <svg className="relative z-10" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="m9 18 6-6-6-6" />
@@ -460,8 +460,8 @@ export default function WalmartGenAIComparison() {
                 <span aria-hidden className="pointer-events-none absolute inset-0 rounded-full">
                   <span className="absolute inset-0 rounded-full bg-[#1d1d1d] mix-blend-plus-lighter" />
                   <span className="absolute inset-0 rounded-full bg-[rgba(29,29,29,0.2)] mix-blend-color-burn" />
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter" />
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[12px]" />
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter opacity-40 sm:opacity-100" />
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[6px] sm:backdrop-blur-[12px]" />
                 </span>
                 <svg className="relative z-10" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="m15 18-6-6 6-6" />
@@ -478,8 +478,8 @@ export default function WalmartGenAIComparison() {
                 <span aria-hidden className="pointer-events-none absolute inset-0 rounded-full">
                   <span className="absolute inset-0 rounded-full bg-[#1d1d1d] mix-blend-plus-lighter" />
                   <span className="absolute inset-0 rounded-full bg-[rgba(29,29,29,0.2)] mix-blend-color-burn" />
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter" />
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[12px]" />
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter opacity-40 sm:opacity-100" />
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[6px] sm:backdrop-blur-[12px]" />
                 </span>
                 <svg className="relative z-10" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="m9 18 6-6-6-6" />
@@ -512,12 +512,12 @@ export default function WalmartGenAIComparison() {
           <p className="mt-4 text-base leading-7 text-[#b3b3b3]">
             <strong className="text-[#f5f5f5]">Responsibilities:</strong> Character limits, spacing, interaction, flow, error states, variants, AI-disclaimer with legal
           </p>
-          <div className="mt-8 flex w-[85vw] items-start gap-1">
+          <div className="mt-8 flex w-full flex-col gap-4 sm:w-[85vw] sm:flex-row sm:items-start sm:gap-1">
             <div className="shrink-0 overflow-hidden rounded-xl">
-              <Image src="/projects/walmart-genai/card-spec.png" alt="Dev handoff card spec" width={1920} height={1080} className="w-[480px]" quality={90} unoptimized />
+              <Image src="/projects/walmart-genai/card-spec.png" alt="Dev handoff card spec" width={1920} height={1080} className="w-full sm:w-[480px]" quality={90} unoptimized />
             </div>
             <div className="shrink-0 overflow-hidden rounded-xl">
-              <Image src="/projects/walmart-genai/card-nav.png" alt="Dev handoff card navigation" width={1920} height={1080} className="w-[600px]" quality={90} unoptimized />
+              <Image src="/projects/walmart-genai/card-nav.png" alt="Dev handoff card navigation" width={1920} height={1080} className="w-full sm:w-[600px]" quality={90} unoptimized />
             </div>
           </div>
           <div className="relative left-1/2 -translate-x-1/2 mt-4 w-[85vw] overflow-hidden rounded-xl">
@@ -564,7 +564,7 @@ export default function WalmartGenAIComparison() {
           <h2 className="text-2xl font-bold text-[#f5f5f5] sm:text-3xl">
             The team behind the magic
           </h2>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-6 hidden flex-wrap gap-3 sm:flex">
             {teamMembers.map((member, i) => (
               <span key={i} className="rounded-full bg-[#222222] px-4 py-2 text-sm text-[#b3b3b3]">
                 👤 {member}
@@ -573,6 +573,18 @@ export default function WalmartGenAIComparison() {
             <span className="rounded-full bg-[#222222] px-4 py-2 text-sm text-[#b3b3b3]">
               ...and many many more!
             </span>
+          </div>
+          <div className="mt-6 -mx-5 overflow-x-auto sm:hidden" style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}>
+            <div className="grid grid-rows-2 grid-flow-col gap-2 px-5 w-max">
+              {teamMembers.map((member, i) => (
+                <span key={i} className="whitespace-nowrap rounded-full bg-[#222222] px-4 py-2 text-sm text-[#b3b3b3]">
+                  👤 {member}
+                </span>
+              ))}
+              <span className="whitespace-nowrap rounded-full bg-[#222222] px-4 py-2 text-sm text-[#b3b3b3]">
+                ...and many many more!
+              </span>
+            </div>
           </div>
         </section>
 

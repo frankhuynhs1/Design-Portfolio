@@ -439,8 +439,8 @@ export default function Home() {
                 </span>
               ))}
             </h1>
-            <p className="mt-3 whitespace-nowrap text-[11.5px] sm:text-lg text-[#f5f5f5]">
-              Product Thinking • Visual and Interaction Design • Design Systems • AI
+            <p className="mt-3 text-[11.5px] leading-relaxed sm:whitespace-nowrap sm:text-lg text-[#f5f5f5]">
+              Product Thinking • Visual and Interaction Design<br className="sm:hidden" /> • Design Systems • AI
             </p>
             <p className="mt-8 max-w-xl text-base sm:text-lg leading-7 text-[#f5f5f5]">
               5+ years design experience in e-commerce + consumer facing roles for iOS, Android, and Web across mobile, tablet, desktop devices.
@@ -472,8 +472,8 @@ export default function Home() {
               <div aria-hidden className="pointer-events-none absolute inset-0 rounded-full">
                 <div className="absolute inset-0 rounded-full bg-[#1d1d1d] mix-blend-plus-lighter" />
                 <div className="absolute inset-0 rounded-full bg-[rgba(29,29,29,0.2)] mix-blend-color-burn" />
-                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter" />
-                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[12px]" />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter opacity-40 sm:opacity-100" />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[6px] sm:backdrop-blur-[12px]" />
               </div>
               <span className="relative z-10">View work</span>
               <svg

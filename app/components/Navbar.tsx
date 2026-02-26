@@ -96,8 +96,8 @@ export default function Navbar() {
                   <div aria-hidden className="pointer-events-none absolute inset-0 rounded-full">
                     <div className="absolute inset-0 rounded-full bg-[#1d1d1d] mix-blend-plus-lighter" />
                     <div className="absolute inset-0 rounded-full bg-[rgba(29,29,29,0.2)] mix-blend-color-burn" />
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter" />
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[12px]" />
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter opacity-40 sm:opacity-100" />
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[6px] sm:backdrop-blur-[12px]" />
                   </div>
                   <span className="relative z-10">{link.label}</span>
                   <div className="pointer-events-none absolute inset-0 rounded-[inherit] shadow-[inset_16px_16px_9px_-18px_rgba(255,255,255,0.5),inset_-12px_-12px_6px_-14px_#b3b3b3,inset_2px_2px_1px_-2px_#b3b3b3,inset_0px_0px_22px_0px_rgba(242,242,242,0.5)]" />
@@ -131,45 +131,42 @@ export default function Navbar() {
           onClick={() => setResumeOpen(false)}
         >
           <div
-            className="relative flex h-[95vh] w-auto max-w-[95vw] flex-col overflow-hidden rounded-2xl bg-[#222] shadow-2xl"
-            style={{ aspectRatio: "8.5 / 11.5" }}
+            className="relative flex h-[100dvh] w-[100vw] flex-col overflow-hidden bg-[#222] shadow-2xl sm:h-[95vh] sm:w-auto sm:max-w-[95vw] sm:rounded-2xl sm:[aspect-ratio:8.5/11.5]"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close button */}
-            <div className="flex shrink-0 items-center justify-end px-4 pt-3 pb-1">
-              <button
-                onClick={() => setResumeOpen(false)}
-                className="flex h-8 w-8 items-center justify-center rounded-full text-zinc-400 transition-colors duration-200 hover:bg-zinc-700 hover:text-white"
-                aria-label="Close"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-              </button>
-            </div>
-            {/* PDF Embed — no sidebar */}
-            <div className="flex-1 overflow-hidden px-4">
+            {/* Close button — absolute on mobile so it doesn't shift the PDF */}
+            <button
+              onClick={() => setResumeOpen(false)}
+              className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[#222]/80 text-zinc-400 backdrop-blur-sm transition-colors duration-200 hover:bg-zinc-700 hover:text-white sm:static sm:ml-auto sm:mr-4 sm:mt-3 sm:mb-1 sm:bg-transparent sm:backdrop-blur-none"
+              aria-label="Close"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+            {/* PDF Embed + Download */}
+            <div className="flex flex-1 flex-col items-center justify-center overflow-hidden px-1 sm:px-4">
               <iframe
-                src="/resume.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitV"
-                className="h-full w-full"
+                src="/resume.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit"
+                className="w-full sm:h-full"
+                style={{ aspectRatio: "8.5 / 11" }}
                 title="Resume"
               />
-            </div>
-            {/* Download button */}
-            <div className="flex items-center justify-center border-t border-zinc-700/50 px-6 py-3">
-              <a
-                href="/resume.pdf"
-                download
-                className="flex items-center gap-2 rounded-full border border-zinc-600 px-5 py-2 text-sm font-medium text-zinc-300 transition-all duration-200 hover:border-zinc-400 hover:text-white"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                  <polyline points="7 10 12 15 17 10" />
-                  <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-                Download
-              </a>
+              <div className="shrink-0 flex items-center justify-center px-6 py-3">
+                <a
+                  href="/resume.pdf"
+                  download
+                  className="flex items-center gap-2 rounded-full border border-zinc-600 px-5 py-2 text-sm font-medium text-zinc-300 transition-all duration-200 hover:border-zinc-400 hover:text-white"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Download
+                </a>
+              </div>
             </div>
           </div>
         </div>
