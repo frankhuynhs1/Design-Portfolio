@@ -701,8 +701,8 @@ export default function Home() {
                   title={project.title}
                   href={"href" in project ? project.href : undefined}
                   tags={project.tags}
-                  videoSrc={"videoSrc" in project ? project.videoSrc : undefined}
-                  imageSrc={"imageSrc" in project ? project.imageSrc : undefined}
+                  videoSrc={(project as any).videoSrc}
+                  imageSrc={(project as any).imageSrc}
                   variant="featured"
                 />
               </div>
