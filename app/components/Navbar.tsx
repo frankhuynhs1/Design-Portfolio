@@ -16,7 +16,17 @@ export default function Navbar() {
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [resumeOpen, setResumeOpen] = useState(false);
+  const [resumeClosing, setResumeClosing] = useState(false);
+  const [resumeOrigin, setResumeOrigin] = useState("top center");
   const lastY = useRef(0);
+
+  const closeResume = useCallback(() => {
+    setResumeClosing(true);
+    setTimeout(() => {
+      setResumeOpen(false);
+      setResumeClosing(false);
+    }, 350);
+  }, []);
 
   useEffect(() => {
     if (pathname !== "/") {
@@ -45,8 +55,8 @@ export default function Navbar() {
   }, [resumeOpen]);
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    if (e.key === "Escape") setResumeOpen(false);
-  }, []);
+    if (e.key === "Escape") closeResume();
+  }, [closeResume]);
 
   useEffect(() => {
     if (resumeOpen) {
@@ -82,7 +92,13 @@ export default function Navbar() {
               "modal" in link && link.modal ? (
                 <button
                   key={link.label}
-                  onClick={() => setResumeOpen(true)}
+                  onClick={(e) => {
+                    const rect = e.currentTarget.getBoundingClientRect();
+                    const x = rect.left + rect.width / 2;
+                    const y = rect.top + rect.height / 2;
+                    setResumeOrigin(`${x}px ${y}px`);
+                    setResumeOpen(true);
+                  }}
                   className="flex items-center gap-1.5 whitespace-nowrap pl-3 pr-3 py-3 text-[15px] font-medium text-white transition-all duration-300 hover:scale-105 hover:text-zinc-300"
                 >
                   {link.label}
@@ -127,20 +143,20 @@ export default function Navbar() {
       {/* Resume Modal */}
       {resumeOpen && (
         <div
-          className="fixed inset-0 z-[200] flex items-center justify-center bg-black/70 backdrop-blur-sm"
-          onClick={() => setResumeOpen(false)}
+          className={`fixed inset-0 z-[200] flex items-center justify-center bg-black/70 backdrop-blur-sm ${resumeClosing ? "animate-[fadeOut_0.3s_ease-in_forwards]" : "animate-[fadeIn_0.2s_ease-out]"}`}
+          onClick={closeResume}
         >
           <div
-            className="relative flex h-[100dvh] w-[100vw] flex-col overflow-hidden bg-[#222] shadow-2xl sm:h-[95vh] sm:w-[700px] sm:max-w-[95vw] sm:rounded-2xl"
+            className={`relative flex h-[100dvh] w-[100vw] flex-col overflow-hidden bg-[#222] shadow-2xl sm:h-[95vh] sm:w-[700px] sm:max-w-[95vw] sm:rounded-2xl ${resumeClosing ? "animate-[modalSlideOut_0.35s_cubic-bezier(0.4,0,1,1)_forwards]" : "animate-[modalSlideIn_0.35s_cubic-bezier(0,0,0.2,1)]"}`}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close button — absolute on mobile so it doesn't shift the PDF */}
+            {/* Close button */}
             <button
-              onClick={() => setResumeOpen(false)}
-              className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[#222]/80 text-zinc-400 backdrop-blur-sm transition-colors duration-200 hover:bg-zinc-700 hover:text-white sm:static sm:ml-auto sm:mr-4 sm:mt-3 sm:mb-1 sm:bg-transparent sm:backdrop-blur-none"
+              onClick={closeResume}
+              className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-[#222]/80 text-zinc-400 backdrop-blur-sm transition-colors duration-200 hover:bg-zinc-700 hover:text-white sm:static sm:ml-auto sm:mr-4 sm:mt-3 sm:mb-1 sm:h-8 sm:w-8 sm:bg-transparent sm:backdrop-blur-none"
               aria-label="Close"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:h-[18px] sm:w-[18px]">
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
