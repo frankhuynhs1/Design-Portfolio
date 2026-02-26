@@ -19,6 +19,12 @@ export default function Navbar() {
   const lastY = useRef(0);
 
   useEffect(() => {
+    if (pathname !== "/") {
+      sessionStorage.setItem("introPlayed", "1");
+    }
+  }, [pathname]);
+
+  useEffect(() => {
     function onScroll() {
       const y = window.scrollY;
       setHidden(y > 80 && y > lastY.current);

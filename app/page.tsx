@@ -272,8 +272,11 @@ export default function Home() {
 
   useEffect(() => {
     const played = sessionStorage.getItem("introPlayed");
+    const reloadFlag = sessionStorage.getItem("homeReload");
 
-    if (played) {
+    if (reloadFlag) {
+      sessionStorage.removeItem("homeReload");
+    } else if (played) {
       setPhase(3);
       return;
     }
@@ -293,6 +296,14 @@ export default function Home() {
     const t2 = setTimeout(() => setPhase(2), 2700);
     const t3 = setTimeout(() => { setPhase(3); sessionStorage.setItem("introPlayed", "1"); }, 3300);
     return () => { clearTimeout(tCrumble); clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
+  }, []);
+
+  useEffect(() => {
+    function onBeforeUnload() {
+      sessionStorage.setItem("homeReload", "1");
+    }
+    window.addEventListener("beforeunload", onBeforeUnload);
+    return () => window.removeEventListener("beforeunload", onBeforeUnload);
   }, []);
 
   return (
