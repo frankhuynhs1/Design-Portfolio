@@ -9,56 +9,23 @@ const testimonials = [
   {
     name: "Charlotte Passot",
     role: "Sr Manager, Design @ Walmart",
+    image: "/charlotte.jpeg",
     quote:
       "I had the pleasure of managing Franklin during his time at Walmart. He demonstrated tremendous growth and, over the course of one year, became adept at leading high-priority, complex features across Search and Gen AI, gaining visibility from senior leadership, including SVPs. Franklin is a team player with a strong work ethic. He approaches customer problems holistically and consistently demonstrates strategic thinking, alongside a keen ability to dive into the details. With his talent and collaborative spirit, he would be a valuable asset to any team.",
   },
   {
     name: "Lauren Glazer",
     role: "Principal Designer @ Walmart",
+    image: "/lauren.jpeg",
     quote:
       "I've worked with Franklin for over a year now on the search team during my time at Walmart. He is a passionate UX designer, who consistently dives deep into a problem space before jumping into solutions. He shows strength in breaking down a problem, asking the right questions to help push on and influence strategic direction on all of his projects regardless of size. His work leading the design for Comparison in search at Walmart showed his strength in tackling a complex, large scale project, working with many stakeholders and various levels of product and design leadership to ensure alignment and move the project forward. Franklin's visual design skills are as strong as his UX thinking - he does a great job at pushing the right boundaries of a design system and exploring all solutions that can help the team flex into more innovative thinking as well as more traditional solutions. He's able to balance multiple large scale initiatives at a time, and during my time working with Franklin as well, he has always been open and eager to feedback and works quickly to grow in any areas of opportunity. Franklin has been amazing to work with, and would be a great addition to any design team!",
   },
   {
-    name: "Aydrien Leonard (Celeski)",
-    role: "Sr UX Designer @ Nordstrom",
-    quote:
-      "I had the sincere joy of working alongside Franklin for most of 2022 while at Nordstrom. He displayed the UX chops recruiters and managers dream of. To look at a problem is an adventure for Franklin. He looks at the context and dives right in, ensuring he has researchers and content designers by his side in an inclusive and strategic way. When it comes to the artifacts such as journey maps, sketches, wireframes, prototypes, and report-outs: no pixel is left untouched. His storytelling skills and empathy set him apart and always delivers a better experience for the customer. I hope I get to work with Franklin again because he is a true UX magician.",
-  },
-  {
-    name: "Angela Sharer",
-    role: "Principal UX Researcher @ Nordstrom",
-    quote:
-      "Franklin joined Nordstrom as a UX Designer I, growing quickly into a UX Designer II through his work in a very complex space (Fulfillment--enabling customers to get their items how they want and when they want). Franklin is a talented designer, thoughtfully considering multiple design options and proactively seeking feedback on his work. He has been able to gracefully manage multiple, sometimes-difficult stakeholders with competing agendas (including me!), and overall is a lovely person who is a pleasure to work with. I recommend Frankie to anybody looking for a great UX Designer!",
-  },
-  {
     name: "Tiffany Clark",
     role: "Sr UX Researcher @ Nordstrom",
+    image: "/tiffany.jpeg",
     quote:
       "Anyone would be lucky to have Frankie on their team! His passion and talent in design is so obvious. He's always learning, always growing, and a positive ray of sunshine in the room. His work in customer fulfillment has been impactful and significant.",
-  },
-  {
-    name: '"Mila" J. Milam Byrne',
-    role: "Sr Manager, Product Design @ Microsoft",
-    quote:
-      "Franklin is a natural born designer. He has a magical mix of empathy, curiosity, an analytical mind, and a passion for his craft. I coached Franklin over several months on a complicated project charter at Microsoft OneNote which involved a complex enterprise product, integrations with other applications, multiple design systems, and multiple target audiences. Franklin impressed me right away with his ability to tease out and articulate complex user needs and motivations, and then to effectively translate those requirements into actionable design goals. Franklin is a strong teammate, moving seamlessly between leading and supporting others as needed. He excels at finding fresh and practical solutions to complicated and ambiguous design problems, and he's a sponge for new design knowledge. I highly recommend him, he would be a strong addition to any design team.",
-  },
-  {
-    name: "John Hurr",
-    role: "Sr Manager, UX Design @ Best Buy",
-    quote:
-      "Franklin is a fantastic problem solver. He has a natural ability to synthesize research, requirements, and anything else thrown his way to create truly creative, achievable, and user-centered design work. He is ambitious and hungry to learn. I would recommend Franklin as an asset to any team looking to create great experiences!",
-  },
-  {
-    name: "Janet Chang",
-    role: "Sr Manager, UX Design @ Best Buy",
-    quote:
-      "Mentorship at its best when it comes to mentoring Franklin. A curious mind that made him not only a fast learner but a great source to the latest of things. Franklin excelled in a fast-paced environment. Can switch from synthesizing a usability study results to building design system components with ease. He would be a great asset to any team looking for a multi-talented IC.",
-  },
-  {
-    name: "Dali Charles Qin",
-    role: "iOS Engineer @ Best Buy",
-    quote:
-      "I worked with Franklin during his 12-week internship here at Best Buy as an indirect mentor. Although we didn't collaborate on specific projects together, we interacted closely enough for me to recommend him to those who are seeking a passionate and skillful designer. Franklin is someone you can trust and depend on, someone you can give a task to and not worrying about the details of — he is going to surprise you with the amount of thoughtfulness and attention to detail in everything that he does. He is also masterful at reframing complicated tasks into smaller workable problems and prioritize them in a strategic way that maximizes the team's efficiency in product delivery. One thing I notice a lot while being around him is just how laser-focused he is when he's in his zone with his headphones on. Most young people are easily distracted these days but not Franklin. I can also speak to his genuine and playful personality which really helps to lighten the daily work environment. It was a distinct pleasure to have worked with Franklin. He will be a great addition to any team who is looking for an aspiring and fun young professional in the design space.",
   },
 ];
 
@@ -156,7 +123,6 @@ export default function About() {
                     quality={100}
                   />
                 </div>
-                <p className="mt-4 text-center font-sans text-base text-white">Mt. Fuji, Japan 🗻</p>
               </div>
             </div>
           </div>
@@ -174,7 +140,13 @@ export default function About() {
                 className="group rounded-2xl bg-[#222222] p-8 text-center transition-all duration-300"
               >
                 <div className="mb-4 flex flex-col items-center">
-                  <div className="mb-3 h-20 w-20 rounded-full bg-zinc-700/60" />
+                  {"image" in t && t.image ? (
+                    <div className="mb-3 h-20 w-20 overflow-hidden rounded-full">
+                      <Image src={t.image} alt={t.name} width={80} height={80} className="h-full w-full object-cover" />
+                    </div>
+                  ) : (
+                    <div className="mb-3 h-20 w-20 rounded-full bg-zinc-700/60" />
+                  )}
                   <p className="text-lg font-bold text-[#f5f5f5]">{t.name}</p>
                   <p className="mt-1 text-base text-[#888]"><span className="font-bold">Role when written:</span> {t.role}</p>
                 </div>
@@ -187,6 +159,17 @@ export default function About() {
 
       <footer className="relative z-10 -mt-2 border-t border-zinc-800 py-6 sm:-mt-2 sm:py-8">
         <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8 text-center">
+          <p className="group/credits mb-1.5 text-xs text-[#555]">
+            {"Created using Cursor and Claude".split("").map((char, i) => (
+              <span
+                key={i}
+                className="inline-block transition-colors duration-300 group-hover/credits:animate-[letter-rainbow_1.5s_ease-in-out_infinite]"
+                style={{ animationDelay: `${i * 0.05}s` }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </span>
+            ))}
+          </p>
           <p className="text-base sm:text-lg text-[#b3b3b3]">Like what you see?</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl md:text-5xl">
             Drop me a line!

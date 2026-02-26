@@ -278,6 +278,16 @@ body {
   animation: skeleton-shimmer 2s ease forwards;
 }
 
+@keyframes letter-rainbow {
+  0% { color: #ff6b6b; }
+  16% { color: #ffa94d; }
+  33% { color: #ffd43b; }
+  50% { color: #69db7c; }
+  66% { color: #74c0fc; }
+  83% { color: #b197fc; }
+  100% { color: #ff6b6b; }
+}
+
 @keyframes map-dot-pulse {
   0%, 100% { opacity: 0; }
   20% { opacity: 0.35; }
