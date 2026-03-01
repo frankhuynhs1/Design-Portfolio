@@ -168,10 +168,8 @@ export default function Navbar() {
                 <h2 className="text-2xl font-bold text-[#f5f5f5] sm:text-3xl">Franklin Huynh</h2>
                 <p className="mt-1 text-base text-zinc-400">Product Designer</p>
                 <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-zinc-500">
-                  <span>franklinhuynh.com</span>
-                  <span>frankhuynhs@gmail.com</span>
-                  <span>/in/huynhfranklin</span>
-                  <span>(253) 355-3311</span>
+                  <a href="mailto:frankhuynhs@gmail.com" className="hover:text-zinc-300 transition-colors">frankhuynhs@gmail.com</a>
+                  <a href="https://www.linkedin.com/in/huynhfranklin/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors">/in/huynhfranklin</a>
                 </div>
                 <p className="mt-3 text-base leading-relaxed text-zinc-400">
                   5+ years designing in consumer facing roles across e-commerce and retail experiences for web and app.
