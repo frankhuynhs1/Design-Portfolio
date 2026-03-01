@@ -102,13 +102,16 @@ export default function TransparentVideo({
   className,
   canvasBg,
   style,
-}: TransparentVideoProps) {
+  playing,
+}: TransparentVideoProps & { playing?: boolean }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const animRef = useRef<number>(0);
   const visibleRef = useRef(true);
   const glRef = useRef<ReturnType<typeof initGL>>(null);
+  const playingRef = useRef(playing);
+  playingRef.current = playing;
 
   useEffect(() => {
     const video = videoRef.current;
@@ -126,6 +129,12 @@ export default function TransparentVideo({
       animRef.current = requestAnimationFrame(draw);
       if (!video || !canvas) return;
       if (video.videoWidth === 0) return;
+
+      if (playingRef.current === false) {
+        if (!video.paused) video.pause();
+        return;
+      }
+
       if (video.paused) { video.play().catch(() => {}); return; }
       if (!visibleRef.current) return;
 

@@ -54,6 +54,7 @@ export interface ProjectCardProps {
   imageAlt?: string;
   tags?: string[];
   variant?: ProjectCardVariant;
+  playing?: boolean;
 }
 
 export default function ProjectCard({
@@ -66,6 +67,7 @@ export default function ProjectCard({
   imageAlt = title,
   tags = [],
   variant = "featured",
+  playing,
 }: ProjectCardProps) {
   const isHighlight = variant === "highlight";
   const [hovered, setHovered] = useState(false);
@@ -137,6 +139,7 @@ export default function ProjectCard({
               }`}
               canvasBg={videoFit === "contain" ? "rgb(34,34,34)" : undefined}
               style={videoScale ? { transform: `scale(${videoScale})` } : undefined}
+              playing={playing}
             />
           ) : imageSrc ? (
             <Image
