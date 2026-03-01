@@ -112,8 +112,14 @@ const FADE_MS = 200;
 function ToolkitCycler() {
   const [activeIdx, setActiveIdx] = useState(0);
   const [fading, setFading] = useState(false);
+  const [progress, setProgress] = useState(false);
 
   useEffect(() => {
+    setProgress(false);
+    const kickoff = requestAnimationFrame(() => {
+      requestAnimationFrame(() => setProgress(true));
+    });
+
     const timeout = setTimeout(() => {
       setFading(true);
       setTimeout(() => {
@@ -121,7 +127,11 @@ function ToolkitCycler() {
         setFading(false);
       }, FADE_MS);
     }, CYCLE_MS);
-    return () => clearTimeout(timeout);
+
+    return () => {
+      cancelAnimationFrame(kickoff);
+      clearTimeout(timeout);
+    };
   }, [activeIdx]);
 
   const tool = toolkitItems[activeIdx];
@@ -130,13 +140,22 @@ function ToolkitCycler() {
     <div className="mt-3 flex items-center gap-2 text-xs">
       <span className="text-zinc-500">Design toolkit</span>
       <span className="text-zinc-600">/</span>
-      <span
-        className={`inline-flex items-center gap-1.5 transition-opacity ${fading ? "opacity-0" : "opacity-100"}`}
-        style={{ transitionDuration: `${FADE_MS}ms` }}
-      >
-        <span className="font-medium text-zinc-500">{tool.label}</span>
-        <span className="text-zinc-600">·</span>
-        <span className="text-zinc-500">{tool.detail}</span>
+      <span className="relative inline-flex flex-col">
+        <span
+          className={`inline-flex items-center gap-1.5 transition-opacity ${fading ? "opacity-0" : "opacity-100"}`}
+          style={{ transitionDuration: `${FADE_MS}ms` }}
+        >
+          <span className="font-medium text-zinc-500">{tool.label}</span>
+          <span className="text-zinc-600">·</span>
+          <span className="text-zinc-500">{tool.detail}</span>
+        </span>
+        <span
+          className="mt-1 h-px bg-zinc-600"
+          style={{
+            width: progress ? "100%" : "0%",
+            transition: progress ? `width ${CYCLE_MS}ms linear` : "none",
+          }}
+        />
       </span>
     </div>
   );
