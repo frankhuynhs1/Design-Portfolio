@@ -99,6 +99,49 @@ function BubblePopParticles({ x, y, onDone }: { x: number; y: number; onDone: ()
   );
 }
 
+const toolkitItems = [
+  { label: "Claude CoWork + ChatGPT", detail: "Discovery" },
+  { label: "Cursor + Claude", detail: "Design prototyping" },
+  { label: "Dscout + Usertest", detail: "Research" },
+  { label: "Figma", detail: "Design & handoff" },
+];
+
+const CYCLE_MS = 3000;
+const FADE_MS = 200;
+
+function ToolkitCycler() {
+  const [activeIdx, setActiveIdx] = useState(0);
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setFading(true);
+      setTimeout(() => {
+        setActiveIdx((prev) => (prev + 1) % toolkitItems.length);
+        setFading(false);
+      }, FADE_MS);
+    }, CYCLE_MS);
+    return () => clearTimeout(timeout);
+  }, [activeIdx]);
+
+  const tool = toolkitItems[activeIdx];
+
+  return (
+    <div className="mt-3 flex items-center gap-2 text-xs">
+      <span className="text-zinc-500">Design toolkit</span>
+      <span className="text-zinc-600">/</span>
+      <span
+        className={`inline-flex items-center gap-1.5 transition-opacity ${fading ? "opacity-0" : "opacity-100"}`}
+        style={{ transitionDuration: `${FADE_MS}ms` }}
+      >
+        <span className="font-medium text-[#f5f5f5]">{tool.label}</span>
+        <span className="text-zinc-600">·</span>
+        <span className="text-[#f5f5f5]">{tool.detail}</span>
+      </span>
+    </div>
+  );
+}
+
 const recentProjects: { title: string; tags: string[]; imageSrc?: string; videoSrc?: string; videoScale?: number }[] = [
   { title: "Metro/City Landing Pages", tags: ["Chewy • 2026"], videoSrc: "/highlights/metro-pages-mobile.mov" },
   { title: "Drop-off Appointments", tags: ["Chewy • 2026"], videoSrc: "/highlights/dropoff-cross-metro.mov" },
@@ -447,9 +490,7 @@ export default function Home() {
                 </span>
               ))}
             </h1>
-            <p className="mt-3 text-[11.5px] leading-relaxed sm:whitespace-nowrap sm:text-lg text-[#f5f5f5]">
-              Product Thinking • Visual and Interaction Design<br className="sm:hidden" /> • Design Systems • AI
-            </p>
+            <ToolkitCycler />
             <p className="mt-8 max-w-xl text-base sm:text-lg leading-7 text-[#f5f5f5]">
               5+ years design experience in e-commerce + consumer facing roles for iOS, Android, and Web across mobile, tablet, desktop devices.
             </p>
