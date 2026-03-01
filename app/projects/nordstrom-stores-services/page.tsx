@@ -137,14 +137,14 @@ export default function NordstromStoresServices() {
           <div className="mt-14 flex gap-4">
             <div className="group/img1 flex-1">
               <p className="mb-1 text-center text-lg font-bold text-[#f5f5f5]">Low discovery</p>
-              <p className="mb-3 max-h-0 overflow-hidden text-center text-sm text-[#b3b3b3] opacity-0 transition-all duration-300 group-hover/img1:max-h-20 group-hover/img1:opacity-100">Store info and services are buried</p>
+              <p className="mb-3 text-center text-sm text-[#b3b3b3]">Store info and services are buried</p>
               <div className="overflow-hidden rounded-xl">
                 <Image src="/projects/nordstrom-stores/problem1.png" alt="Customer problem insight 1" width={1920} height={1080} className="w-full" quality={90} unoptimized />
               </div>
             </div>
             <div className="group/img2 flex-1">
               <p className="mb-1 text-center text-lg font-bold text-[#f5f5f5]">Dead ends</p>
-              <p className="mb-3 max-h-0 overflow-hidden text-center text-sm text-[#b3b3b3] opacity-0 transition-all duration-300 group-hover/img2:max-h-20 group-hover/img2:opacity-100">Missing tablestake details and booking options</p>
+              <p className="mb-3 text-center text-sm text-[#b3b3b3]">Missing tablestake details and booking options</p>
               <div className="overflow-hidden rounded-xl">
                 <Image src="/projects/nordstrom-stores/problem2.png" alt="Customer problem insight 2" width={1920} height={1080} className="w-full" quality={90} unoptimized />
               </div>
@@ -619,13 +619,14 @@ export default function NordstromStoresServices() {
           <div className="mt-8 flex items-center justify-center gap-4">
             <Link
               href="/about"
-              className="inline-flex items-center justify-center rounded-full border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:border-zinc-500 hover:text-white"
+              className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:text-white"
             >
               About
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4" /><path d="M20 21a8 8 0 0 0-16 0" /></svg>
             </Link>
             <button
               onClick={copyEmail}
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:border-zinc-500 hover:text-white"
+              className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:text-white"
             >
               {copied ? "Copied!" : "Copy email"}
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></svg>

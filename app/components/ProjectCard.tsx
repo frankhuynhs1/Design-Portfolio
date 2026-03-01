@@ -97,14 +97,7 @@ export default function ProjectCard({
           {title}
         </h3>
         {!isHighlight && (
-          <div className="shrink-0 relative flex h-10 w-[4.5rem] items-center overflow-hidden rounded-full transition-colors duration-300 group-hover/card:bg-white">
-            <span aria-hidden className="pointer-events-none absolute inset-0 rounded-full transition-opacity duration-300 group-hover/card:opacity-0">
-              <span className="absolute inset-0 rounded-full bg-[#1d1d1d] mix-blend-plus-lighter" />
-              <span className="absolute inset-0 rounded-full bg-[rgba(29,29,29,0.2)] mix-blend-color-burn" />
-              <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter opacity-40 sm:opacity-100" />
-              <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[6px] sm:backdrop-blur-[12px]" />
-            </span>
-            <span className="pointer-events-none absolute inset-0 rounded-[inherit] shadow-[inset_16px_16px_9px_-18px_rgba(255,255,255,0.5),inset_-12px_-12px_6px_-14px_#b3b3b3,inset_2px_2px_1px_-2px_#b3b3b3,inset_0px_0px_22px_0px_rgba(242,242,242,0.5)] transition-opacity duration-300 group-hover/card:opacity-0" />
+          <div className="shrink-0 relative flex h-10 w-[4.5rem] items-center rounded-full transition-all duration-300 liquid-glass group-hover/card:border-white/40 group-hover/card:shadow-[0_0_12px_rgba(255,255,255,0.25)]">
             <div className="absolute left-2 z-10 transition-all duration-300 group-hover/card:left-[calc(100%-30px)]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +109,7 @@ export default function ProjectCard({
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="text-zinc-300 transition-colors duration-300 group-hover/card:text-zinc-800"
+                className="text-zinc-300 transition-colors duration-300"
               >
                 <line x1="7" y1="17" x2="17" y2="7" />
                 <polyline points="7 7 17 7 17 17" />

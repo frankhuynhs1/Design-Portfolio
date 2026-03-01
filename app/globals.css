@@ -402,4 +402,13 @@ body {
 .crumble-5 { clip-path: polygon(30% 50%, 60% 30%, 55% 100%, 25% 100%); animation: crumble-5 0.6s 0.05s ease-in forwards; }
 .crumble-6 { clip-path: polygon(0% 100%, 25% 100%, 55% 100%, 30% 50%); animation: crumble-6 0.6s 0.04s ease-in forwards; }
 
-
+.liquid-glass {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow:
+    0 4px 16px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.15),
+    inset 0 -1px 0 rgba(255,255,255,0.05);
+}

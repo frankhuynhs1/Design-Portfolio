@@ -137,20 +137,20 @@ function ToolkitCycler() {
   const tool = toolkitItems[activeIdx];
 
   return (
-    <div className="mt-3 flex items-center gap-2 text-xs">
-      <span className="text-zinc-500">Design toolkit</span>
-      <span className="text-zinc-600">/</span>
-      <span className="relative inline-flex flex-col">
+    <div className="mt-3 flex items-baseline gap-2 text-xs">
+      <span className="text-[#b3b3b3]">Design toolkit</span>
+      <span className="text-[#b3b3b3]">/</span>
+      <span className="relative inline-flex items-baseline">
         <span
-          className={`inline-flex items-center gap-1.5 transition-opacity ${fading ? "opacity-0" : "opacity-100"}`}
+          className={`inline-flex items-baseline gap-1.5 transition-opacity ${fading ? "opacity-0" : "opacity-100"}`}
           style={{ transitionDuration: `${FADE_MS}ms` }}
         >
-          <span className="font-medium text-zinc-500">{tool.label}</span>
-          <span className="text-zinc-600">·</span>
-          <span className="text-zinc-500">{tool.detail}</span>
+          <span className="font-medium text-[#b3b3b3]">{tool.label}</span>
+          <span className="text-[#b3b3b3]">·</span>
+          <span className="text-[#b3b3b3]">{tool.detail}</span>
         </span>
         <span
-          className="mt-1 h-px bg-zinc-600"
+          className="absolute bottom-[-4px] left-0 h-px bg-zinc-700"
           style={{
             width: progress ? "100%" : "0%",
             transition: progress ? `width ${CYCLE_MS}ms linear` : "none",
@@ -535,17 +535,10 @@ export default function Home() {
                   requestAnimationFrame(step);
                 }
               }}
-              className="relative mt-6 inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:scale-105"
+              className="liquid-glass relative mt-6 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:scale-105"
             >
-              <div aria-hidden className="pointer-events-none absolute inset-0 rounded-full">
-                <div className="absolute inset-0 rounded-full bg-[#1d1d1d] mix-blend-plus-lighter" />
-                <div className="absolute inset-0 rounded-full bg-[rgba(29,29,29,0.2)] mix-blend-color-burn" />
-                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter opacity-40 sm:opacity-100" />
-                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[6px] sm:backdrop-blur-[12px]" />
-              </div>
-              <span className="relative z-10">View work</span>
+              View work
               <svg
-                className="relative z-10"
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
                 height="14"
@@ -559,7 +552,6 @@ export default function Home() {
                 <path d="M12 5v14" />
                 <path d="m19 12-7 7-7-7" />
               </svg>
-              <div className="pointer-events-none absolute inset-0 rounded-[inherit] shadow-[inset_16px_16px_9px_-18px_rgba(255,255,255,0.5),inset_-12px_-12px_6px_-14px_#b3b3b3,inset_2px_2px_1px_-2px_#b3b3b3,inset_0px_0px_22px_0px_rgba(242,242,242,0.5)]" />
             </button>
           </div>
         </section>
@@ -709,14 +701,14 @@ export default function Home() {
                         alt={brand.name}
                         width={brand.width}
                         height={brand.height}
-                        className="relative z-10 opacity-50 brightness-0 invert grayscale transition-all duration-300 group-hover/brand:opacity-0"
+                        className="relative z-10 scale-[0.85] opacity-50 brightness-0 invert grayscale transition-all duration-300 group-hover/brand:opacity-0 sm:scale-100"
                       />
                       <Image
                         src={brand.logoHover}
                         alt={brand.name}
                         width={brand.width}
                         height={brand.height}
-                        className="absolute z-10 opacity-0 transition-all duration-300 group-hover/brand:opacity-100"
+                        className="absolute z-10 scale-[0.85] opacity-0 transition-all duration-300 group-hover/brand:opacity-100 sm:scale-100"
                       />
                     </>
                   ) : (
@@ -725,7 +717,7 @@ export default function Home() {
                       alt={brand.name}
                       width={brand.width}
                       height={brand.height}
-                      className="relative z-10 opacity-50 grayscale transition-all duration-300 group-hover/brand:opacity-100 group-hover/brand:grayscale-0 group-hover/brand:brightness-125 group-hover/brand:saturate-150"
+                      className="relative z-10 scale-[0.85] opacity-50 grayscale transition-all duration-300 group-hover/brand:opacity-100 group-hover/brand:grayscale-0 group-hover/brand:brightness-125 group-hover/brand:saturate-150 sm:scale-100"
                     />
                   )
                 ) : (
@@ -811,13 +803,14 @@ export default function Home() {
           <div className="mt-8 flex items-center justify-center gap-4">
             <Link
               href="/about"
-              className="inline-flex items-center justify-center rounded-full border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:border-zinc-500 hover:text-white"
+              className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:text-white"
             >
               About
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4" /><path d="M20 21a8 8 0 0 0-16 0" /></svg>
             </Link>
             <button
               onClick={copyEmail}
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:border-zinc-500 hover:text-white"
+              className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:text-white"
             >
               {copied ? "Copied!" : "Copy email"}
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></svg>

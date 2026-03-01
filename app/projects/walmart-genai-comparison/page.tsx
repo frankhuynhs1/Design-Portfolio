@@ -92,7 +92,7 @@ const concepts = [
   { title: "Standard chart", desc: "Knowing that a chart is industry standard, we wanted to innovate beyond this concept", img: "/projects/walmart-genai/concept1-v2.png" },
   { title: "Blog post", desc: "Although comprehensive, this design seemed too dense and resembled our item pages too closely", img: "/projects/walmart-genai/concept2.png" },
   { title: "Input driven criteria", desc: "Data quality issues prevent us from leaning into asking for customer preferences", img: "/projects/walmart-genai/concept3.png" },
-  { title: "Summarized cards", desc: "Leadership loved the idea of summarizing crucial details for customers in one single viewport", img: "/projects/walmart-genai/concept4.png" },
+  { title: "Summarized cards", desc: "Leadership loved the idea of summarizing crucial details for customers in one single viewport", img: "/projects/walmart-genai/concept4.png", favorite: true },
 ];
 
 const competitorCards = [
@@ -330,37 +330,23 @@ export default function WalmartGenAIComparison() {
                 {canScrollCompLeft && (
                   <button
                     onClick={() => { const el = compScrollRef.current; if (el) el.scrollBy({ left: -el.clientWidth * 0.6, behavior: "smooth" }); }}
-                    className="absolute left-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center overflow-hidden rounded-full transition-opacity hover:opacity-90"
+                    className="liquid-glass absolute left-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full transition-opacity hover:opacity-90"
                     aria-label="Scroll left"
                   >
-                    <span aria-hidden className="pointer-events-none absolute inset-0 rounded-full">
-                      <span className="absolute inset-0 rounded-full bg-[#1d1d1d] mix-blend-plus-lighter" />
-                      <span className="absolute inset-0 rounded-full bg-[rgba(29,29,29,0.2)] mix-blend-color-burn" />
-                      <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter opacity-40 sm:opacity-100" />
-                      <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[6px] sm:backdrop-blur-[12px]" />
-                    </span>
-                    <svg className="relative z-10" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="m15 18-6-6 6-6" />
                     </svg>
-                    <span className="pointer-events-none absolute inset-0 rounded-[inherit] shadow-[inset_16px_16px_9px_-18px_rgba(255,255,255,0.5),inset_-12px_-12px_6px_-14px_#b3b3b3,inset_2px_2px_1px_-2px_#b3b3b3,inset_0px_0px_22px_0px_rgba(242,242,242,0.5)]" />
                   </button>
                 )}
                 {canScrollCompRight && (
                   <button
                     onClick={() => { const el = compScrollRef.current; if (el) el.scrollBy({ left: el.clientWidth * 0.6, behavior: "smooth" }); }}
-                    className="absolute right-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center overflow-hidden rounded-full transition-opacity hover:opacity-90"
+                    className="liquid-glass absolute right-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full transition-opacity hover:opacity-90"
                     aria-label="Scroll right"
                   >
-                    <span aria-hidden className="pointer-events-none absolute inset-0 rounded-full">
-                      <span className="absolute inset-0 rounded-full bg-[#1d1d1d] mix-blend-plus-lighter" />
-                      <span className="absolute inset-0 rounded-full bg-[rgba(29,29,29,0.2)] mix-blend-color-burn" />
-                      <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter opacity-40 sm:opacity-100" />
-                      <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[6px] sm:backdrop-blur-[12px]" />
-                    </span>
-                    <svg className="relative z-10" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="m9 18 6-6-6-6" />
                     </svg>
-                    <span className="pointer-events-none absolute inset-0 rounded-[inherit] shadow-[inset_16px_16px_9px_-18px_rgba(255,255,255,0.5),inset_-12px_-12px_6px_-14px_#b3b3b3,inset_2px_2px_1px_-2px_#b3b3b3,inset_0px_0px_22px_0px_rgba(242,242,242,0.5)]" />
                   </button>
                 )}
                 <div
@@ -424,7 +410,10 @@ export default function WalmartGenAIComparison() {
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             {concepts.map((c, i) => (
               <div key={i} className="rounded-2xl bg-[#222222] p-6">
-                <h3 className="text-lg font-bold text-[#f5f5f5]">{c.title}</h3>
+                <h3 className="flex items-center gap-2 text-lg font-bold text-[#f5f5f5]">
+                  {(c as any).favorite && <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" className="text-red-400"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>}
+                  {c.title}
+                </h3>
                 <p className="mt-2 text-base leading-7 text-[#b3b3b3]">{c.desc}</p>
                 {c.img && (
                   <div className="mt-4 overflow-hidden rounded-xl">
@@ -460,37 +449,23 @@ export default function WalmartGenAIComparison() {
             {canScrollResLeft && (
               <button
                 onClick={() => { const el = researchScrollRef.current; if (el) el.scrollBy({ left: -el.clientWidth * 0.6, behavior: "smooth" }); }}
-                className="absolute left-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center overflow-hidden rounded-full transition-opacity hover:opacity-90"
+                className="liquid-glass absolute left-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full transition-opacity hover:opacity-90"
                 aria-label="Scroll left"
               >
-                <span aria-hidden className="pointer-events-none absolute inset-0 rounded-full">
-                  <span className="absolute inset-0 rounded-full bg-[#1d1d1d] mix-blend-plus-lighter" />
-                  <span className="absolute inset-0 rounded-full bg-[rgba(29,29,29,0.2)] mix-blend-color-burn" />
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter opacity-40 sm:opacity-100" />
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[6px] sm:backdrop-blur-[12px]" />
-                </span>
-                <svg className="relative z-10" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="m15 18-6-6 6-6" />
                 </svg>
-                <span className="pointer-events-none absolute inset-0 rounded-[inherit] shadow-[inset_16px_16px_9px_-18px_rgba(255,255,255,0.5),inset_-12px_-12px_6px_-14px_#b3b3b3,inset_2px_2px_1px_-2px_#b3b3b3,inset_0px_0px_22px_0px_rgba(242,242,242,0.5)]" />
               </button>
             )}
-            {(
+            {canScrollResRight && (
               <button
                 onClick={() => { const el = researchScrollRef.current; if (el) el.scrollBy({ left: el.clientWidth * 0.6, behavior: "smooth" }); }}
-                className="absolute right-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center overflow-hidden rounded-full transition-opacity hover:opacity-90"
+                className="liquid-glass absolute right-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full transition-opacity hover:opacity-90"
                 aria-label="Scroll right"
               >
-                <span aria-hidden className="pointer-events-none absolute inset-0 rounded-full">
-                  <span className="absolute inset-0 rounded-full bg-[#1d1d1d] mix-blend-plus-lighter" />
-                  <span className="absolute inset-0 rounded-full bg-[rgba(29,29,29,0.2)] mix-blend-color-burn" />
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0)] from-50% to-[rgba(102,102,102,0.4)] mix-blend-plus-lighter opacity-40 sm:opacity-100" />
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-b from-[rgba(102,102,102,0.2)] to-[rgba(102,102,102,0)] to-[33%] mix-blend-plus-lighter backdrop-blur-[6px] sm:backdrop-blur-[12px]" />
-                </span>
-                <svg className="relative z-10" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="m9 18 6-6-6-6" />
                 </svg>
-                <span className="pointer-events-none absolute inset-0 rounded-[inherit] shadow-[inset_16px_16px_9px_-18px_rgba(255,255,255,0.5),inset_-12px_-12px_6px_-14px_#b3b3b3,inset_2px_2px_1px_-2px_#b3b3b3,inset_0px_0px_22px_0px_rgba(242,242,242,0.5)]" />
               </button>
             )}
             <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-[#191919] to-transparent" />
@@ -526,7 +501,7 @@ export default function WalmartGenAIComparison() {
               <Image src="/projects/walmart-genai/card-nav.png" alt="Dev handoff card navigation" width={1920} height={1080} className="w-full sm:w-[600px]" quality={90} unoptimized />
             </div>
           </div>
-          <div className="relative left-1/2 -translate-x-1/2 mt-4 w-[85vw] overflow-hidden rounded-xl">
+          <div className="relative left-1/2 -translate-x-1/2 mt-4 w-full sm:w-[75vw] overflow-hidden rounded-xl">
             <Image src="/projects/walmart-genai/ok.png" alt="Dev handoff overview" width={1920} height={1080} className="w-full" quality={90} unoptimized />
           </div>
         </section>
@@ -629,13 +604,14 @@ export default function WalmartGenAIComparison() {
           <div className="mt-8 flex items-center justify-center gap-4">
             <Link
               href="/about"
-              className="inline-flex items-center justify-center rounded-full border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:border-zinc-500 hover:text-white"
+              className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:text-white"
             >
               About
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4" /><path d="M20 21a8 8 0 0 0-16 0" /></svg>
             </Link>
             <button
               onClick={copyEmail}
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:border-zinc-500 hover:text-white"
+              className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:text-white"
             >
               {copied ? "Copied!" : "Copy email"}
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></svg>
