@@ -134,9 +134,9 @@ function ToolkitCycler() {
         className={`inline-flex items-center gap-1.5 transition-opacity ${fading ? "opacity-0" : "opacity-100"}`}
         style={{ transitionDuration: `${FADE_MS}ms` }}
       >
-        <span className="font-medium text-[#f5f5f5]">{tool.label}</span>
+        <span className="font-medium text-zinc-500">{tool.label}</span>
         <span className="text-zinc-600">·</span>
-        <span className="text-[#f5f5f5]">{tool.detail}</span>
+        <span className="text-zinc-500">{tool.detail}</span>
       </span>
     </div>
   );
