@@ -210,25 +210,34 @@ export default function Navbar() {
                   <div>
                     <div className="flex items-baseline justify-between gap-2">
                       <p className="text-base font-bold text-[#f5f5f5]">Nordstrom</p>
-                      <span className="shrink-0 text-sm text-zinc-500">May 2022 – Dec 2022</span>
+                      <span className="shrink-0 text-sm text-zinc-500">Nov 2020 – Dec 2022</span>
                     </div>
-                    <p className="text-sm font-medium text-zinc-400">UX Designer II, Fulfillment CX</p>
-                    <ul className="mt-1.5 space-y-1.5 text-sm leading-relaxed text-zinc-500">
-                      <li>Led mid-large scaled fulfillment solutions, including the launch of the Stores tab on app that brought +24k new and unique customers using our services across Nordstrom and Nordstrom Rack in first month of launch.</li>
-                      <li>Defined and owned the short and long-term roadmap for omni-channel cx, working strategically and thoughtfully with product, engineering and other cross-functional teams.</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <div className="flex items-baseline justify-between gap-2">
-                      <p className="text-base font-bold text-[#f5f5f5]">Nordstrom</p>
-                      <span className="shrink-0 text-sm text-zinc-500">Nov 2020 – May 2022</span>
+                    <div className="mt-3">
+                      <div className="flex items-center gap-4">
+                        <div className="h-2.5 w-2.5 shrink-0 rounded-full border-2 border-zinc-500" />
+                        <div className="flex flex-1 items-baseline justify-between gap-2">
+                          <p className="text-sm font-medium text-zinc-400">UX Designer II, Fulfillment CX</p>
+                          <span className="shrink-0 text-xs text-zinc-600">May 2022 – Dec 2022</span>
+                        </div>
+                      </div>
+                      <div className="ml-[4.5px] border-l border-zinc-700 py-2 pl-[19.5px]">
+                        <ul className="space-y-1.5 text-sm leading-relaxed text-zinc-500">
+                          <li>Led mid-large scaled fulfillment solutions, including the launch of the Stores tab on app that brought +24k new and unique customers using our services across Nordstrom and Nordstrom Rack in first month of launch.</li>
+                          <li>Defined and owned the short and long-term roadmap for omni-channel cx, working strategically and thoughtfully with product, engineering and other cross-functional teams.</li>
+                        </ul>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="h-2.5 w-2.5 shrink-0 rounded-full border-2 border-zinc-500" />
+                        <div className="flex flex-1 items-baseline justify-between gap-2">
+                          <p className="text-sm font-medium text-zinc-400">UX Designer, Fulfillment &amp; Returns</p>
+                          <span className="shrink-0 text-xs text-zinc-600">Nov 2020 – May 2022</span>
+                        </div>
+                      </div>
+                      <ul className="mt-1.5 space-y-1.5 pl-[26px] text-sm leading-relaxed text-zinc-500">
+                        <li>Designed comprehensive solutions and influenced fulfillment and return initiatives that guided our customers across the purchase and post-purchase fulfillment funnel for Web, iOS, and Android app.</li>
+                        <li>Expanded customer control options for pickup order deadlines, resulting in +11.1M top line revenue for store pickups.</li>
+                      </ul>
                     </div>
-                    <p className="text-sm font-medium text-zinc-400">UX Designer, Fulfillment &amp; Returns</p>
-                    <ul className="mt-1.5 space-y-1.5 text-sm leading-relaxed text-zinc-500">
-                      <li>Designed comprehensive solutions and influenced fulfillment and return initiatives that guided our customers across the purchase and post-purchase fulfillment funnel for Web, iOS, and Android app.</li>
-                      <li>Expanded customer control options for pickup order deadlines, resulting in +11.1M top line revenue for store pickups.</li>
-                    </ul>
                   </div>
 
                   <div>
@@ -255,7 +264,7 @@ export default function Navbar() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-zinc-400">Tools</p>
-                    <p className="mt-1 text-sm leading-relaxed text-zinc-500">Figma/Make, Claude, ChatGPT, Cursor, Lovable, FigJam, Protopie, Usertesting.com, Dscout, Jira, Confluence, Pen and Paper</p>
+                    <p className="mt-1 text-sm leading-relaxed text-zinc-500">Figma/Make, Claude, ChatGPT, Cursor, Magic Patterns, FigJam, Protopie, Usertesting.com, Dscout, Jira, Confluence, Pen and Paper</p>
                   </div>
                   <div>
                     <p className="text-sm font-bold text-zinc-400">Design artifacts</p>
