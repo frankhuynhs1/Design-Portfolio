@@ -567,7 +567,7 @@ export default function Home() {
             {brands.map((brand, i) => (
               <div
                 key={i}
-                className="group/brand relative flex h-[72px] w-[calc(33.333%-8px)] items-center justify-center rounded-2xl bg-zinc-800/40 px-3 transition-all duration-300 hover:scale-105 hover:-rotate-2 sm:h-[96px] sm:w-auto sm:flex-1 sm:px-6"
+                className="group/brand relative flex h-[72px] w-[calc(33.333%-8px)] items-center justify-center rounded-2xl border border-zinc-700/40 bg-zinc-800/30 px-3 transition-all duration-300 hover:scale-105 hover:-rotate-2 sm:h-[96px] sm:w-auto sm:flex-1 sm:px-6"
               >
                 {/* Hover icons */}
                 <div className="absolute -bottom-10 left-1/2 z-20 flex -translate-x-1/2 items-start gap-1 opacity-0 transition-all duration-300 group-hover/brand:opacity-100 group-hover/brand:-bottom-12">

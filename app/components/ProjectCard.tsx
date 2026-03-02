@@ -88,8 +88,8 @@ export default function ProjectCard({
       onMouseLeave={() => setHovered(false)}
       className={`group/card flex shrink-0 flex-col overflow-hidden rounded-2xl transition-all duration-300 ${
         isHighlight
-          ? "w-[75vw] sm:w-[440px] border border-zinc-700/40 bg-[#222222] hover:border-zinc-600/60"
-          : "w-full border border-zinc-600/60 bg-[#222222] sm:border-transparent sm:bg-transparent sm:hover:border-zinc-600/60 sm:hover:bg-[#222222]"
+          ? "w-[75vw] sm:w-[440px] border border-zinc-700/40 bg-zinc-800/30 hover:border-zinc-600/60"
+          : "w-full border border-zinc-700/40 bg-zinc-800/30 sm:border-transparent sm:bg-transparent sm:hover:border-zinc-700/40 sm:hover:bg-zinc-800/30"
       }`}
     >
       <div className={`flex items-start justify-between gap-3 transition-all duration-300 ${isHighlight ? "px-5 pt-5 pb-3" : "max-h-20 opacity-100 px-4 pt-4 pb-3 sm:max-h-0 sm:overflow-hidden sm:opacity-0 sm:pt-0 sm:pb-0 sm:group-hover/card:max-h-20 sm:group-hover/card:opacity-100 sm:group-hover/card:pt-4 sm:group-hover/card:pb-3"}`}>
@@ -123,14 +123,14 @@ export default function ProjectCard({
           {videoSrc ? (
             <TransparentVideo
               src={videoSrc}
-              bgColor={[34, 34, 34]}
+              bgColor={[29, 29, 30]}
               threshold={30}
               className={`absolute inset-0 h-full w-full ${
                 videoFit === "contain"
                   ? "[&_canvas]:h-full [&_canvas]:w-full [&_canvas]:object-contain"
                   : "[&_canvas]:h-full [&_canvas]:w-full [&_canvas]:object-cover"
               }`}
-              canvasBg={videoFit === "contain" ? "rgb(34,34,34)" : undefined}
+              canvasBg={videoFit === "contain" ? "rgb(29,29,30)" : undefined}
               style={videoScale ? { transform: `scale(${videoScale})` } : undefined}
               playing={playing}
             />

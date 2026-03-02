@@ -139,6 +139,27 @@ export default function About() {
           </div>
         </section>
 
+        {/* What I Believe */}
+        <section className="pb-16 sm:pb-24">
+          <h2 className="text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl md:text-5xl">
+            What I believe
+          </h2>
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            {[
+              "Be stubborn with outcomes, flexible with process",
+              "Tools change but the need for judgment doesn\u2019t",
+              "Build proof before selling the vision",
+            ].map((quote) => (
+              <div
+                key={quote}
+                className="rounded-2xl border border-zinc-700/40 bg-zinc-800/30 px-6 py-8 text-lg font-medium leading-relaxed text-[#f5f5f5]"
+              >
+                {quote}
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Kind Words */}
         <section className="pb-16 sm:pb-24">
           <h2 className="text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl md:text-5xl">
@@ -148,7 +169,7 @@ export default function About() {
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className="group rounded-2xl bg-[#222222] p-8 text-center transition-all duration-300"
+                className="group rounded-2xl border border-zinc-700/40 bg-zinc-800/30 p-8 text-center transition-all duration-300"
               >
                 <div className="mb-4 flex flex-col items-center">
                   {"image" in t && t.image ? (
