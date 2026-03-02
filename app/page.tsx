@@ -138,7 +138,7 @@ function ToolkitCycler() {
 
   return (
     <div className="mt-3 flex items-baseline gap-2 text-xs">
-      <span className="text-[#b3b3b3]">Design toolkit</span>
+      <span className="text-[#b3b3b3]">Design stack</span>
       <span className="text-[#b3b3b3]">/</span>
       <span className="relative inline-flex items-baseline">
         <span
@@ -146,7 +146,7 @@ function ToolkitCycler() {
           style={{ transitionDuration: `${FADE_MS}ms` }}
         >
           <span className="font-medium text-[#b3b3b3]">{tool.label}</span>
-          <span className="text-[#b3b3b3]">·</span>
+          <span className="text-[#b3b3b3]">→</span>
           <span className="text-[#b3b3b3]">{tool.detail}</span>
         </span>
         <span
@@ -511,7 +511,7 @@ export default function Home() {
             </h1>
             <ToolkitCycler />
             <p className="mt-8 max-w-xl text-base sm:text-lg leading-7 text-[#f5f5f5]">
-              5+ years design experience in e-commerce + consumer facing roles for iOS, Android, and Web across mobile, tablet, desktop devices.
+              5+ years shaping consumer experiences across e-commerce and service systems, with a growing focus on AI-enabled workflows.
             </p>
             <button
               onClick={() => {
@@ -537,7 +537,6 @@ export default function Home() {
               }}
               className="liquid-glass relative mt-6 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:scale-105"
             >
-              View work
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
@@ -552,6 +551,7 @@ export default function Home() {
                 <path d="M12 5v14" />
                 <path d="m19 12-7 7-7-7" />
               </svg>
+              View work
             </button>
           </div>
         </section>
@@ -805,15 +805,15 @@ export default function Home() {
               href="/about"
               className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:text-white"
             >
-              About
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4" /><path d="M20 21a8 8 0 0 0-16 0" /></svg>
+              About
             </Link>
             <button
               onClick={copyEmail}
               className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:text-white"
             >
-              {copied ? "Copied!" : "Copy email"}
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></svg>
+              {copied ? "Copied!" : "Copy email"}
             </button>
           </div>
         </div>

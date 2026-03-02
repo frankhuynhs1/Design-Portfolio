@@ -107,16 +107,17 @@ export default function About() {
                   href="https://www.linkedin.com/in/huynhfranklin/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="liquid-glass inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:text-white"
+                  className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:text-white"
                 >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
                   View LinkedIn
                 </a>
                 <button
                   onClick={copyEmail}
                   className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:text-white"
                 >
-                  {copied ? "Copied!" : "Copy email"}
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></svg>
+                  {copied ? "Copied!" : "Copy email"}
                 </button>
               </div>
             </div>
@@ -189,15 +190,15 @@ export default function About() {
               href="/about"
               className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:text-white"
             >
-              About
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4" /><path d="M20 21a8 8 0 0 0-16 0" /></svg>
+              About
             </Link>
             <button
               onClick={copyEmail}
               className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:scale-105 hover:text-white"
             >
-              {copied ? "Copied!" : "Copy email"}
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></svg>
+              {copied ? "Copied!" : "Copy email"}
             </button>
           </div>
         </div>
