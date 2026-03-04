@@ -101,9 +101,9 @@ function BubblePopParticles({ x, y, onDone }: { x: number; y: number; onDone: ()
 
 const toolkitItems = [
   { label: "Claude CoWork + ChatGPT", detail: "Discovery" },
-  { label: "Cursor + Claude", detail: "Design prototyping" },
+  { label: "Cursor", detail: "Code prototyping" },
   { label: "Dscout + Usertest", detail: "Research" },
-  { label: "Figma", detail: "Design & handoff" },
+  { label: "Figma/Make", detail: "Explorations & prototyping" },
 ];
 
 const CYCLE_MS = 3000;
@@ -511,7 +511,7 @@ export default function Home() {
             </h1>
             <ToolkitCycler />
             <p className="mt-8 max-w-xl text-base sm:text-lg leading-7 text-[#f5f5f5]">
-              5+ years shaping consumer experiences across e-commerce and service systems, with a growing focus on AI-enabled workflows.
+              5+ years shaping consumer experiences across e-commerce and retail, with a growing focus on AI-enabled workflows.
             </p>
             <button
               onClick={() => {
