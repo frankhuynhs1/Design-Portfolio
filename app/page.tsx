@@ -103,7 +103,7 @@ const toolkitItems = [
   { label: "Claude CoWork + ChatGPT", detail: "Discovery" },
   { label: "Cursor", detail: "Code prototyping" },
   { label: "Dscout + Usertest", detail: "Research" },
-  { label: "Figma/Make", detail: "Explorations & prototyping" },
+  { label: "Figma/Make + Claude", detail: "Explorations & prototyping" },
 ];
 
 const CYCLE_MS = 3000;
@@ -511,7 +511,7 @@ export default function Home() {
             </h1>
             <ToolkitCycler />
             <p className="mt-8 max-w-xl text-base sm:text-lg leading-7 text-[#f5f5f5]">
-              6+ years shaping consumer experiences across e-commerce and retail with a focus on driving acquisition, retention, and product growth.
+              6+ years shaping consumer experiences across e-commerce/retail with a focus on driving acquisition, activation, retention, and product growth.
             </p>
             <button
               onClick={() => {
