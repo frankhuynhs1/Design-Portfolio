@@ -178,7 +178,7 @@ export default function Navbar() {
                   <a href="https://www.linkedin.com/in/huynhfranklin/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors">/in/huynhfranklin</a>
                 </div>
                 <p className="mt-3 text-base leading-relaxed text-zinc-400">
-                  5+ years designing in consumer facing roles across e-commerce and retail experiences for web and app.
+                  6+ years designing in consumer facing roles across e-commerce and retail experiences for web and app.
                 </p>
               </div>
 
@@ -193,9 +193,11 @@ export default function Navbar() {
                       <span className="shrink-0 text-sm text-zinc-500">Jan 2025 – Present</span>
                     </div>
                     <p className="text-sm font-medium text-zinc-400">Product Designer, Pet Health</p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-zinc-500">
-                      Leading design strategy for Chewy Vet Care&apos;s suite of products and crafting platforms that integrate e-commerce with healthcare (running prescriptions, appointment scheduling, and pet health records).
-                    </p>
+                    <ul className="mt-1.5 space-y-1.5 text-sm leading-relaxed text-zinc-500">
+                      <li>Owning design for end-to-end acquisition, activation, and retention journeys for Chewy Vet Care, spanning key surfaces including pet portal, scheduling, landing pages, and multi-channel touch-points across SEO, marketing campaigns, email, push, and in-app.</li>
+                      <li>Launched drop-off appointments for customers to self-schedule online, which has freed up +2k slots monthly for returning patients and driving 81% utilization rate of slots.</li>
+                      <li>Driving AI-enabled design transformation at Chewy Health, embedding workflows and prototyping that connect patient health data to faster, insight-driven concepts.</li>
+                    </ul>
                   </div>
 
                   <div>
@@ -268,7 +270,7 @@ export default function Navbar() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-zinc-400">Tools</p>
-                    <p className="mt-1 text-sm leading-relaxed text-zinc-500">Figma/Make, Claude, ChatGPT, Cursor, Magic Patterns, FigJam, Protopie, Usertesting.com, Dscout, Jira, Confluence, Pen and Paper</p>
+                    <p className="mt-1 text-sm leading-relaxed text-zinc-500">Figma/Make, Claude (Cowork, Code), ChatGPT, Cursor, FigJam, Protopie, Usertesting.com, Dscout, Jira, Confluence, Pen and Paper</p>
                   </div>
                   <div>
                     <p className="text-sm font-bold text-zinc-400">Design artifacts</p>

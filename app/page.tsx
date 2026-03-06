@@ -511,7 +511,7 @@ export default function Home() {
             </h1>
             <ToolkitCycler />
             <p className="mt-8 max-w-xl text-base sm:text-lg leading-7 text-[#f5f5f5]">
-              5+ years shaping consumer experiences across e-commerce and retail with a focus on driving acquisition, retention, and product growth.
+              6+ years shaping consumer experiences across e-commerce and retail with a focus on driving acquisition, retention, and product growth.
             </p>
             <button
               onClick={() => {

@@ -84,7 +84,7 @@ export default function About() {
                   <h2 className="text-xl font-bold text-[#f5f5f5] sm:text-2xl">My background</h2>
                   <p className="mt-4 text-base leading-7 text-[#b3b3b3]">
                     I&apos;m a product designer with experience designing within web and app environments.
-                    Over my 5+ years of experience, I worked with top brands to craft omni-channel retail,
+                    Over my 6+ years of experience, I worked with top brands to craft omni-channel retail,
                     e-commerce, health, enterprise productivity software, and AI experiences that can easily
                     be applied to any industry.
                   </p>
