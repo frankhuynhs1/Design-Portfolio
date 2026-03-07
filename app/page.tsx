@@ -103,7 +103,7 @@ const toolkitItems = [
   { label: "Claude CoWork + ChatGPT", detail: "Discovery" },
   { label: "Cursor", detail: "Code prototyping" },
   { label: "Dscout + Usertest", detail: "Research" },
-  { label: "Figma/Make + Claude", detail: "Explorations & prototyping" },
+  { label: "Figma/Make", detail: "Explorations & prototyping" },
 ];
 
 const CYCLE_MS = 3000;

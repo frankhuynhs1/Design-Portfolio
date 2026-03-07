@@ -153,7 +153,7 @@ export default function Navbar() {
           onClick={closeResume}
         >
           <div
-            className={`relative flex h-[100dvh] w-[100vw] flex-col overflow-hidden bg-[#222] shadow-2xl sm:h-[95vh] sm:w-[700px] sm:max-w-[95vw] sm:rounded-2xl ${resumeClosing ? "animate-[modalSlideOut_0.35s_cubic-bezier(0.4,0,1,1)_forwards]" : "animate-[modalSlideIn_0.35s_cubic-bezier(0,0,0.2,1)]"}`}
+            className={`relative flex h-[95dvh] w-[95vw] flex-col overflow-hidden rounded-2xl bg-[#222] shadow-2xl sm:h-[95vh] sm:w-[700px] sm:max-w-[95vw] ${resumeClosing ? "animate-[modalSlideOut_0.35s_cubic-bezier(0.4,0,1,1)_forwards]" : "animate-[modalSlideIn_0.35s_cubic-bezier(0,0,0.2,1)]"}`}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
@@ -178,7 +178,7 @@ export default function Navbar() {
                   <a href="https://www.linkedin.com/in/huynhfranklin/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors">/in/huynhfranklin</a>
                 </div>
                 <p className="mt-3 text-base leading-relaxed text-zinc-400">
-                  6+ years shaping consumer experiences across e-commerce and retail with a focus on driving acquisition, activation, retention, and product growth for web and app.
+                  6+ years shaping consumer experiences across e-commerce and retail with a focus on driving acquisition, activation, retention, and product growth across web and app.
                 </p>
               </div>
 
@@ -202,9 +202,8 @@ export default function Navbar() {
                       </div>
                       <div className="ml-[4.5px] border-l border-zinc-700 py-2 pl-[19.5px]">
                         <ul className="list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
-                          <li>Owning design for end-to-end acquisition, activation, and retention journeys for Chewy Vet Care, spanning key surfaces including pet portal, scheduling, landing pages, and multi-channel touch-points across SEO, marketing campaigns, email, push, and in-app.</li>
-                          <li>Launched metro/city landing pages, which led to +4.2% scheduling conversion and improved page ranking for short &amp; long tail organic search queries.</li>
-                          <li>Driving AI-enabled design transformation at Chewy Health, embedding workflows and prototyping that connect patient health data to faster, insight-driven concepts.</li>
+                          <li>Owning end-to-end design strategy for acquisition, activation, and retention for Chewy Vet Care. Key surfaces include pet portal, scheduling, landing pages, post-appointment, and lifecycle touch-points (marketing campaigns, SEO, email, push, in-app).</li>
+                          <li>Launched metro/city landing pages to improve SEO and enable targeted marketing campaigns, driving +4.2% first time scheduling conversion lift and improved organic search rankings across short and long-tail queries for vet clinics.</li>
                         </ul>
                       </div>
                       <div className="flex items-center gap-4">
@@ -215,7 +214,7 @@ export default function Navbar() {
                         </div>
                       </div>
                       <ul className="mt-1.5 list-disc space-y-1.5 pl-[40px] text-sm leading-relaxed text-zinc-500">
-                        <li>Led end-to-end consumer and enterprise experiences for Chewy Vet Care, including launching drop-off appointments for customers to self-schedule online, which has freed up +2k slots monthly for returning patients and driving 81% utilization rate of slots.</li>
+                        <li>Led consumer and enterprise design for drop-off appointments – defining logistics, resourcing, and care team workflows to launch self-service online drop-off scheduling that unlocked +2K monthly slots and drove 81% drop-off utilization.</li>
                       </ul>
                     </div>
                   </div>
@@ -227,9 +226,9 @@ export default function Navbar() {
                     </div>
                     <p className="text-sm font-medium text-zinc-400">UX Designer III, Search &amp; Discovery</p>
                     <ul className="mt-1.5 list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
-                      <li>Led design for 1 of 5 generative AI design investments using LLMs that launched in 4 months from concept to production, resulting in +2.62% lift in add to carts and +1.1% lift in conversion.</li>
-                      <li>Collaborated closely with product to support the launch and onboarding UX of E2E strategy for our GenAI experiences on app featured in CES 2024.</li>
-                      <li>Responsible for typeahead roadmap and experiences on Walmart e-commerce and contributed to core search, item tile, and fashion roadmaps.</li>
+                      <li>Owned all design strategy for typeahead and filters roadmap for Walmart e-commerce and contributed to core search, item tile, and fashion priorities.</li>
+                      <li>Launched a GenAI/LLM-powered comparison feature on Search within 4 months from concept to production, delivering +2.62% add-to-cart lift and +1.1% conversion lift.</li>
+                      <li>Shaped our end-to-end GenAI onboarding UX for Walmart&apos;s app experience, which was featured in CES 2024.</li>
                     </ul>
                   </div>
 
@@ -248,8 +247,8 @@ export default function Navbar() {
                       </div>
                       <div className="ml-[4.5px] border-l border-zinc-700 py-2 pl-[19.5px]">
                         <ul className="list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
-                          <li>Led mid-large scaled fulfillment solutions, including the launch of the Stores tab on app that brought +24k new and unique customers using our services across Nordstrom and Nordstrom Rack in first month of launch.</li>
-                          <li>Defined and owned the short and long-term roadmap for omni-channel cx, working strategically and thoughtfully with product, engineering and other cross-functional teams.</li>
+                          <li>Launched Stores tab on the Nordstrom app, acquiring +24K new customers using our alterations service across Nordstrom and Nordstrom Rack within the first month.</li>
+                          <li>Defined and owned design strategy for omni-channel CX, designing across high visibility touch-points such as home page, browse, PDP, checkout, and accounts that drove retention, conversion, and customer lifetime value.</li>
                         </ul>
                       </div>
                       <div className="flex items-center gap-4">
@@ -260,7 +259,7 @@ export default function Navbar() {
                         </div>
                       </div>
                       <ul className="mt-1.5 list-disc space-y-1.5 pl-[40px] text-sm leading-relaxed text-zinc-500">
-                        <li>Designed comprehensive solutions and influenced fulfillment and return initiatives that guided our customers across the purchase and post-purchase fulfillment funnel for Web, iOS, and Android app.</li>
+                        <li>Drove end-to-end fulfillment and returns UX across Web, iOS, and Android, covering the full purchase and post-purchase funnel.</li>
                         <li>Expanded customer control options for pickup order deadlines, resulting in +11.1M top line revenue for store pickups.</li>
                       </ul>
                     </div>
@@ -273,8 +272,7 @@ export default function Navbar() {
                     </div>
                     <p className="text-sm font-medium text-zinc-400">UX Design Intern, Mobile Apps</p>
                     <ul className="mt-1.5 list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
-                      <li>Led several projects across the Support and Browse portfolio of the Best Buy app, resulting in +8% appointments booked, 60% less negative reviews around tech support awareness, and improving way-finding for browse journeys that led to +4% conversion on app.</li>
-                      <li>Conducted research including usability testing, heat mapping, behavioral mapping and other forms of research discovery to inform design directions with product, QA, research, content design, and engineers.</li>
+                      <li>Designed and launched several features across Support and Browse portfolios of the Best Buy app, driving +8% appointments booked, 60% fewer negative tech support reviews, and +4% browse conversion.</li>
                     </ul>
                   </div>
                 </div>
@@ -286,7 +284,7 @@ export default function Navbar() {
                 <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
                     <p className="text-sm font-bold text-zinc-400">Strengths</p>
-                    <p className="mt-1 text-sm leading-relaxed text-zinc-500">iOS, Web, and Android, Product thinking, Interaction and Visual design, Strategy, Research, E-commerce and Retail</p>
+                    <p className="mt-1 text-sm leading-relaxed text-zinc-500">iOS, Android, Web – Mobile, Tablet, Desktop, E-commerce, Retail, Fashion, Acquisition, Activation, Retention, Growth, A/B testing, GenAI and Agentic AI workflows</p>
                   </div>
                   <div>
                     <p className="text-sm font-bold text-zinc-400">Tools</p>
@@ -298,7 +296,7 @@ export default function Navbar() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-zinc-400">Research artifacts</p>
-                    <p className="mt-1 text-sm leading-relaxed text-zinc-500">Interviews, Heuristic evaluations, User research, Task analysis, Usability studies, Contextual inquiries, Behavioral mapping, Surveys, Literature reviews</p>
+                    <p className="mt-1 text-sm leading-relaxed text-zinc-500">Interviews, Heuristic evaluations, User research, Task analysis, Usability studies, Contextual inquiries, Behavioral mapping, Surveys, Literature review</p>
                   </div>
                 </div>
               </div>
