@@ -31,11 +31,11 @@ const testimonials = [
 ];
 
 const aboutItems = [
-  "Seattle nomad (Federal Way → Central District → University District → Leschi → and now, Beacon Hill)",
-  "Enjoys playing League of Legends (except when I lose).",
-  "Food, cars, plants, shoes, camping, tennis, snowboarding, and traveling.",
-  "Learning to make various cocktails. Mixology is so cool – you can thank the drink masters show on Netflix for that.",
-  "A newbie runner who is training for marathons (probably a tell tale sign that I'm approaching my 30's lol).",
+  "Seattle native and nomad (Federal Way → Central District → University District → Leschi → and now, Beacon Hill)",
+  "Enjoys playing League of Legends (except when I lose). Mainly playing ARAM (mayhem) and my favorite champion is Riven!",
+  "Other interests include food, cars, plants, shoes, camping, tennis, snowboarding, running, and traveling.",
+  "Current obsession is making various cocktails. My favorite is an espresso martini of course. I can thank the drink masters show on Netflix for getting me inspired.",
+  "A newbie runner who is training for half-marathons (probably a tell tale sign that I'm approaching my 30's lol). Convince me that a full one is worth running.",
 ];
 
 export default function About() {

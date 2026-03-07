@@ -178,7 +178,7 @@ export default function Navbar() {
                   <a href="https://www.linkedin.com/in/huynhfranklin/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors">/in/huynhfranklin</a>
                 </div>
                 <p className="mt-3 text-base leading-relaxed text-zinc-400">
-                  6+ years designing in consumer facing roles across e-commerce and retail experiences for web and app.
+                  6+ years shaping consumer experiences across e-commerce and retail with a focus on driving acquisition, activation, retention, and product growth for web and app.
                 </p>
               </div>
 
@@ -192,12 +192,32 @@ export default function Navbar() {
                       <p className="text-base font-bold text-[#f5f5f5]">Chewy</p>
                       <span className="shrink-0 text-sm text-zinc-500">Jan 2025 – Present</span>
                     </div>
-                    <p className="text-sm font-medium text-zinc-400">Product Designer, Pet Health</p>
-                    <ul className="mt-1.5 space-y-1.5 text-sm leading-relaxed text-zinc-500">
-                      <li>Owning design for end-to-end acquisition, activation, and retention journeys for Chewy Vet Care, spanning key surfaces including pet portal, scheduling, landing pages, and multi-channel touch-points across SEO, marketing campaigns, email, push, and in-app.</li>
-                      <li>Launched drop-off appointments for customers to self-schedule online, which has freed up +2k slots monthly for returning patients and driving 81% utilization rate of slots.</li>
-                      <li>Driving AI-enabled design transformation at Chewy Health, embedding workflows and prototyping that connect patient health data to faster, insight-driven concepts.</li>
-                    </ul>
+                    <div className="mt-3">
+                      <div className="flex items-center gap-4">
+                        <div className="h-2.5 w-2.5 shrink-0 rounded-full border-2 border-zinc-500" />
+                        <div className="flex flex-1 items-baseline justify-between gap-2">
+                          <p className="text-sm font-medium text-zinc-400">Senior Product Designer, Pet Health</p>
+                          <span className="shrink-0 text-xs text-zinc-600">Feb 2026 – Present</span>
+                        </div>
+                      </div>
+                      <div className="ml-[4.5px] border-l border-zinc-700 py-2 pl-[19.5px]">
+                        <ul className="list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
+                          <li>Owning design for end-to-end acquisition, activation, and retention journeys for Chewy Vet Care, spanning key surfaces including pet portal, scheduling, landing pages, and multi-channel touch-points across SEO, marketing campaigns, email, push, and in-app.</li>
+                          <li>Launched metro/city landing pages, which led to +4.2% scheduling conversion and improved page ranking for short &amp; long tail organic search queries.</li>
+                          <li>Driving AI-enabled design transformation at Chewy Health, embedding workflows and prototyping that connect patient health data to faster, insight-driven concepts.</li>
+                        </ul>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="h-2.5 w-2.5 shrink-0 rounded-full border-2 border-zinc-500" />
+                        <div className="flex flex-1 items-baseline justify-between gap-2">
+                          <p className="text-sm font-medium text-zinc-400">Product Designer, Pet Health</p>
+                          <span className="shrink-0 text-xs text-zinc-600">Jan 2025 – Jan 2026</span>
+                        </div>
+                      </div>
+                      <ul className="mt-1.5 list-disc space-y-1.5 pl-[40px] text-sm leading-relaxed text-zinc-500">
+                        <li>Led end-to-end consumer and enterprise experiences for Chewy Vet Care, including launching drop-off appointments for customers to self-schedule online, which has freed up +2k slots monthly for returning patients and driving 81% utilization rate of slots.</li>
+                      </ul>
+                    </div>
                   </div>
 
                   <div>
@@ -206,7 +226,7 @@ export default function Navbar() {
                       <span className="shrink-0 text-sm text-zinc-500">Jun 2023 – Dec 2024</span>
                     </div>
                     <p className="text-sm font-medium text-zinc-400">UX Designer III, Search &amp; Discovery</p>
-                    <ul className="mt-1.5 space-y-1.5 text-sm leading-relaxed text-zinc-500">
+                    <ul className="mt-1.5 list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
                       <li>Led design for 1 of 5 generative AI design investments using LLMs that launched in 4 months from concept to production, resulting in +2.62% lift in add to carts and +1.1% lift in conversion.</li>
                       <li>Collaborated closely with product to support the launch and onboarding UX of E2E strategy for our GenAI experiences on app featured in CES 2024.</li>
                       <li>Responsible for typeahead roadmap and experiences on Walmart e-commerce and contributed to core search, item tile, and fashion roadmaps.</li>
@@ -227,7 +247,7 @@ export default function Navbar() {
                         </div>
                       </div>
                       <div className="ml-[4.5px] border-l border-zinc-700 py-2 pl-[19.5px]">
-                        <ul className="space-y-1.5 text-sm leading-relaxed text-zinc-500">
+                        <ul className="list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
                           <li>Led mid-large scaled fulfillment solutions, including the launch of the Stores tab on app that brought +24k new and unique customers using our services across Nordstrom and Nordstrom Rack in first month of launch.</li>
                           <li>Defined and owned the short and long-term roadmap for omni-channel cx, working strategically and thoughtfully with product, engineering and other cross-functional teams.</li>
                         </ul>
@@ -239,7 +259,7 @@ export default function Navbar() {
                           <span className="shrink-0 text-xs text-zinc-600">Nov 2020 – May 2022</span>
                         </div>
                       </div>
-                      <ul className="mt-1.5 space-y-1.5 pl-[26px] text-sm leading-relaxed text-zinc-500">
+                      <ul className="mt-1.5 list-disc space-y-1.5 pl-[40px] text-sm leading-relaxed text-zinc-500">
                         <li>Designed comprehensive solutions and influenced fulfillment and return initiatives that guided our customers across the purchase and post-purchase fulfillment funnel for Web, iOS, and Android app.</li>
                         <li>Expanded customer control options for pickup order deadlines, resulting in +11.1M top line revenue for store pickups.</li>
                       </ul>
@@ -252,7 +272,7 @@ export default function Navbar() {
                       <span className="shrink-0 text-sm text-zinc-500">Jun 2019 – Sep 2019</span>
                     </div>
                     <p className="text-sm font-medium text-zinc-400">UX Design Intern, Mobile Apps</p>
-                    <ul className="mt-1.5 space-y-1.5 text-sm leading-relaxed text-zinc-500">
+                    <ul className="mt-1.5 list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
                       <li>Led several projects across the Support and Browse portfolio of the Best Buy app, resulting in +8% appointments booked, 60% less negative reviews around tech support awareness, and improving way-finding for browse journeys that led to +4% conversion on app.</li>
                       <li>Conducted research including usability testing, heat mapping, behavioral mapping and other forms of research discovery to inform design directions with product, QA, research, content design, and engineers.</li>
                     </ul>
