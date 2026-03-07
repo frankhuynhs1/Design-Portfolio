@@ -112,14 +112,8 @@ const FADE_MS = 200;
 function ToolkitCycler() {
   const [activeIdx, setActiveIdx] = useState(0);
   const [fading, setFading] = useState(false);
-  const [progress, setProgress] = useState(false);
 
   useEffect(() => {
-    setProgress(false);
-    const kickoff = requestAnimationFrame(() => {
-      requestAnimationFrame(() => setProgress(true));
-    });
-
     const timeout = setTimeout(() => {
       setFading(true);
       setTimeout(() => {
@@ -128,10 +122,7 @@ function ToolkitCycler() {
       }, FADE_MS);
     }, CYCLE_MS);
 
-    return () => {
-      cancelAnimationFrame(kickoff);
-      clearTimeout(timeout);
-    };
+    return () => clearTimeout(timeout);
   }, [activeIdx]);
 
   const tool = toolkitItems[activeIdx];
@@ -149,13 +140,6 @@ function ToolkitCycler() {
           <span className="text-[#b3b3b3]">→</span>
           <span className="text-[#b3b3b3]">{tool.detail}</span>
         </span>
-        <span
-          className="absolute bottom-[-4px] left-0 h-px bg-zinc-700"
-          style={{
-            width: progress ? "100%" : "0%",
-            transition: progress ? `width ${CYCLE_MS}ms linear` : "none",
-          }}
-        />
       </span>
     </div>
   );
@@ -170,9 +154,10 @@ const recentProjects: { title: string; tags: string[]; imageSrc?: string; videoS
 
 const featuredProjects = [
   {
-    title: "Walmart • GenAI Comparison • 2024",
+    title: "GenAI Comparison",
     href: "/projects/walmart-genai-comparison",
-    tags: [
+    tags: ["Walmart • 2024"],
+    metrics: [
       "↑ 2.6% add to cart / visitor",
       "↑ 1.1% first time buyer conversion",
       "↓ 1.8% session cart removal",
@@ -181,9 +166,10 @@ const featuredProjects = [
     videoSrc: "/highlights/comparison-walkthrough.mov",
   },
   {
-    title: "Nordstrom • Stores & Services • 2023",
+    title: "Stores & Services",
     href: "/projects/nordstrom-stores-services",
-    tags: [
+    tags: ["Nordstrom • 2023"],
+    metrics: [
       "↑ 1.6% conversion",
       "↑ 24k new alteration users (1 mo after launch)",
       "↑ $1.4M EBIT profitability over the year",
@@ -819,6 +805,7 @@ export default function Home() {
                   title={project.title}
                   href={"href" in project ? project.href : undefined}
                   tags={project.tags}
+                  metrics={project.metrics}
                   videoSrc={(project as any).videoSrc}
                   imageSrc={(project as any).imageSrc}
                   variant="featured"
