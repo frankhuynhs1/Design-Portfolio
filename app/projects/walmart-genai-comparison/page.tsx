@@ -330,7 +330,7 @@ export default function WalmartGenAIComparison() {
                 {canScrollCompLeft && (
                   <button
                     onClick={() => { const el = compScrollRef.current; if (el) el.scrollBy({ left: -el.clientWidth * 0.6, behavior: "smooth" }); }}
-                    className="liquid-glass absolute left-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full transition-opacity hover:opacity-90"
+                    className="liquid-glass absolute left-2 xl:-left-[60px] top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full transition-opacity hover:opacity-90"
                     aria-label="Scroll left"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -341,7 +341,7 @@ export default function WalmartGenAIComparison() {
                 {canScrollCompRight && (
                   <button
                     onClick={() => { const el = compScrollRef.current; if (el) el.scrollBy({ left: el.clientWidth * 0.6, behavior: "smooth" }); }}
-                    className="liquid-glass absolute right-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full transition-opacity hover:opacity-90"
+                    className="liquid-glass absolute right-2 xl:-right-[60px] top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full transition-opacity hover:opacity-90"
                     aria-label="Scroll right"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -449,7 +449,7 @@ export default function WalmartGenAIComparison() {
             {canScrollResLeft && (
               <button
                 onClick={() => { const el = researchScrollRef.current; if (el) el.scrollBy({ left: -el.clientWidth * 0.6, behavior: "smooth" }); }}
-                className="liquid-glass absolute left-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full transition-opacity hover:opacity-90"
+                className="liquid-glass absolute left-2 xl:-left-[60px] top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full transition-opacity hover:opacity-90"
                 aria-label="Scroll left"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -460,7 +460,7 @@ export default function WalmartGenAIComparison() {
             {canScrollResRight && (
               <button
                 onClick={() => { const el = researchScrollRef.current; if (el) el.scrollBy({ left: el.clientWidth * 0.6, behavior: "smooth" }); }}
-                className="liquid-glass absolute right-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full transition-opacity hover:opacity-90"
+                className="liquid-glass absolute right-2 xl:-right-[60px] top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full transition-opacity hover:opacity-90"
                 aria-label="Scroll right"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -574,9 +574,10 @@ export default function WalmartGenAIComparison() {
           <h2 className="text-2xl font-bold text-[#f5f5f5] sm:text-3xl">Up next</h2>
           <div className="mt-8">
             <ProjectCard
-              title="Nordstrom • Stores & Services • 2023"
+              title="Stores & Services"
               href="/projects/nordstrom-stores-services"
-              tags={["↑ 1.6% conversion", "↑ 24k new alteration users (1 mo after launch)", "↑ $1.4M EBIT profitability over the year"]}
+              tags={["Nordstrom • 2023"]}
+              metrics={["↑ 1.6% conversion", "↑ 24k new alteration users (1 mo after launch)", "↑ $1.4M EBIT profitability over the year"]}
               videoSrc="/highlights/stores-services.mov"
               variant="featured"
             />

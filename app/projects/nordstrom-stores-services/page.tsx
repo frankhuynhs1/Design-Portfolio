@@ -589,9 +589,10 @@ export default function NordstromStoresServices() {
           <h2 className="text-2xl font-bold text-[#f5f5f5] sm:text-3xl">Up next</h2>
           <div className="mt-8">
             <ProjectCard
-              title="Walmart • GenAI Comparison • 2024"
+              title="GenAI Comparison"
               href="/projects/walmart-genai-comparison"
-              tags={["↑ 2.6% add to cart / visitor", "↑ 1.1% first time buyer conversion", "↓ 1.8% session cart removal", "↑ 12.8% re-engagement"]}
+              tags={["Walmart • 2024"]}
+              metrics={["↑ 2.6% add to cart / visitor", "↑ 1.1% first time buyer conversion", "↓ 1.8% session cart removal", "↑ 12.8% re-engagement"]}
               videoSrc="/highlights/comparison-walkthrough.mov"
               variant="featured"
             />
