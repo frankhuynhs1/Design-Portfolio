@@ -206,6 +206,12 @@ export default function Home() {
   const [crumbling, setCrumbling] = useState(false);
   const [bubble1Popped, setBubble1Popped] = useState(false);
   const [bubble2Popped, setBubble2Popped] = useState(false);
+  const [bubble1Hovered, setBubble1Hovered] = useState(false);
+  const [bubble2Hovered, setBubble2Hovered] = useState(false);
+  const [wobble1Key, setWobble1Key] = useState(0);
+  const [wobble2Key, setWobble2Key] = useState(0);
+  const [bubbleHintBubble, setBubbleHintBubble] = useState<1 | 2 | null>(null);
+  const bubbleHintSeen = useRef(typeof window !== "undefined" && sessionStorage.getItem("bubbleHintSeen") === "1");
   const [copied, setCopied] = useState(false);
   const [hoveredHighlight, setHoveredHighlight] = useState<number | null>(null);
 
@@ -312,6 +318,9 @@ export default function Home() {
         const id = Date.now();
         setPopEffects((prev) => [...prev, { id, x: ev.clientX, y: ev.clientY }]);
         playPopSound();
+        bubbleHintSeen.current = true;
+        setBubbleHintBubble(null);
+        sessionStorage.setItem("bubbleHintSeen", "1");
         setPopped(true);
         setOffset({ x: 0, y: 0 });
         setTimeout(() => {
@@ -331,6 +340,9 @@ export default function Home() {
     const dragRef = bubble === 1 ? drag1 : drag2;
     if (dragRef.current?.moved) return;
     spawnPop(e);
+    bubbleHintSeen.current = true;
+    setBubbleHintBubble(null);
+    sessionStorage.setItem("bubbleHintSeen", "1");
     if (bubble === 1) {
       setBubble1Popped(true);
       setTimeout(() => setBubble1Popped(false), 1500);
@@ -445,7 +457,7 @@ export default function Home() {
         <section className={`relative pt-12 pb-16 sm:pt-16 sm:pb-20 md:pt-20 md:pb-24 transition-all duration-700 ${phase === -1 || phase >= 2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
           <div className="absolute inset-0 hidden overflow-visible sm:block">
             <div
-              className={`pointer-events-auto select-none absolute -top-4 right-[-80px] w-[180px] cursor-grab active:cursor-grabbing md:right-[-60px] md:w-[220px] lg:right-[-40px] lg:w-[250px] ${
+              className={`pointer-events-auto select-none absolute -top-4 right-[-120px] w-[180px] cursor-grab active:cursor-grabbing md:right-[-100px] md:w-[220px] lg:right-[-80px] lg:w-[250px] ${
                 bubble1Popped ? "scale-0 opacity-0 transition-all duration-300" : "scale-100 opacity-100 transition-all duration-300"
               } ${bubble1Returning ? "transition-[transform,opacity] duration-[600ms] ease-out" : ""}`}
               style={{
@@ -455,20 +467,31 @@ export default function Home() {
               }}
               onMouseDown={(e) => handleBubbleDown(e, 1)}
               onClick={(e) => handleBubbleClick(e, 1)}
+              onMouseEnter={() => { setBubble1Hovered(true); setWobble1Key((k) => k + 1); if (!bubbleHintSeen.current) setBubbleHintBubble(1); }}
+              onMouseLeave={() => { setBubble1Hovered(false); setBubbleHintBubble(null); }}
             >
-              <Image
-                src="/bubble1.png"
-                alt=""
-                width={600}
-                height={669}
-                className="w-full select-none pointer-events-none"
-                draggable={false}
-                quality={100}
-                unoptimized
-              />
+              <div style={{ animation: bubble1Popped || bubble1Hovered ? "none" : "bubble-breathe 4s ease-in-out infinite" }}>
+                <div key={wobble1Key} style={{ animation: bubble1Hovered ? "bubble-wobble 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97)" : "none" }}>
+                  <Image
+                    src="/bubble1.png"
+                    alt=""
+                    width={600}
+                    height={669}
+                    className="w-full select-none pointer-events-none"
+                    draggable={false}
+                    quality={100}
+                    unoptimized
+                  />
+                </div>
+              </div>
+              {bubbleHintBubble === 1 && !bubble1Popped && (
+                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-zinc-800/80 px-3 py-1 text-xs font-medium text-zinc-300 backdrop-blur-sm animate-[fadeIn_0.3s_ease-out]">
+                  Pop me!
+                </span>
+              )}
             </div>
             <div
-              className={`pointer-events-auto select-none absolute bottom-12 right-[160px] w-[180px] cursor-grab active:cursor-grabbing md:right-[200px] md:w-[220px] lg:right-[240px] lg:w-[250px] ${
+              className={`pointer-events-auto select-none absolute bottom-12 right-[120px] w-[180px] cursor-grab active:cursor-grabbing md:right-[160px] md:w-[220px] lg:right-[200px] lg:w-[250px] ${
                 bubble2Popped ? "scale-0 opacity-0 transition-all duration-300" : "scale-100 opacity-100 transition-all duration-300"
               } ${bubble2Returning ? "transition-[transform,opacity] duration-[600ms] ease-out" : ""}`}
               style={{
@@ -478,17 +501,28 @@ export default function Home() {
               }}
               onMouseDown={(e) => handleBubbleDown(e, 2)}
               onClick={(e) => handleBubbleClick(e, 2)}
+              onMouseEnter={() => { setBubble2Hovered(true); setWobble2Key((k) => k + 1); if (!bubbleHintSeen.current) setBubbleHintBubble(2); }}
+              onMouseLeave={() => { setBubble2Hovered(false); setBubbleHintBubble(null); }}
             >
-              <Image
-                src="/bubble2.png"
-                alt=""
-                width={675}
-                draggable={false}
-                height={579}
-                className="w-full select-none pointer-events-none"
-                quality={100}
-                unoptimized
-              />
+              <div style={{ animation: bubble2Popped || bubble2Hovered ? "none" : "bubble-breathe 4.5s ease-in-out infinite" }}>
+                <div key={wobble2Key} style={{ animation: bubble2Hovered ? "bubble-wobble 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97)" : "none" }}>
+                  <Image
+                    src="/bubble2.png"
+                    alt=""
+                    width={675}
+                    draggable={false}
+                    height={579}
+                    className="w-full select-none pointer-events-none"
+                    quality={100}
+                    unoptimized
+                  />
+                </div>
+              </div>
+              {bubbleHintBubble === 2 && !bubble2Popped && (
+                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-zinc-800/80 px-3 py-1 text-xs font-medium text-zinc-300 backdrop-blur-sm animate-[fadeIn_0.3s_ease-out]">
+                  Pop me!
+                </span>
+              )}
             </div>
           </div>
           <div className="relative max-w-xl">
