@@ -206,6 +206,8 @@ export default function Home() {
   const [crumbling, setCrumbling] = useState(false);
   const [bubble1Popped, setBubble1Popped] = useState(false);
   const [bubble2Popped, setBubble2Popped] = useState(false);
+  const [bubblesInflated, setBubblesInflated] = useState(false);
+  const [bubblesInflating, setBubblesInflating] = useState(false);
   const [bubble1Hovered, setBubble1Hovered] = useState(false);
   const [bubble2Hovered, setBubble2Hovered] = useState(false);
   const [wobble1Key, setWobble1Key] = useState(0);
@@ -360,6 +362,8 @@ export default function Home() {
       sessionStorage.removeItem("homeReload");
     } else if (played) {
       setPhase(3);
+      setTimeout(() => setBubblesInflating(true), 300);
+      setTimeout(() => { setBubblesInflated(true); setBubblesInflating(false); }, 2000);
       return;
     }
     setPhase(0);
@@ -375,7 +379,7 @@ export default function Home() {
     requestAnimationFrame(tick);
     const tCrumble = setTimeout(() => setCrumbling(true), 1300);
     const t1 = setTimeout(() => setPhase(1), 1900);
-    const t2 = setTimeout(() => setPhase(2), 2700);
+    const t2 = setTimeout(() => { setPhase(2); setTimeout(() => setBubblesInflating(true), 200); setTimeout(() => { setBubblesInflated(true); setBubblesInflating(false); }, 1900); }, 2700);
     const t3 = setTimeout(() => { setPhase(3); sessionStorage.setItem("introPlayed", "1"); }, 3300);
     return () => { clearTimeout(tCrumble); clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
   }, []);
@@ -458,10 +462,14 @@ export default function Home() {
           <div className="absolute inset-0 hidden overflow-visible sm:block">
             <div
               className={`pointer-events-auto select-none absolute -top-4 right-[-120px] w-[180px] cursor-grab active:cursor-grabbing md:right-[-100px] md:w-[220px] lg:right-[-80px] lg:w-[250px] ${
-                bubble1Popped ? "scale-0 opacity-0 transition-all duration-300" : "scale-100 opacity-100 transition-all duration-300"
+                bubble1Popped ? "scale-0 opacity-0 transition-all duration-300" : !bubblesInflated && !bubblesInflating ? "scale-0 opacity-0" : "opacity-100 transition-all duration-300"
               } ${bubble1Returning ? "transition-[transform,opacity] duration-[600ms] ease-out" : ""}`}
               style={{
-                animation: bubble1Popped || drag1.current || bubble1Offset.x !== 0 || bubble1Offset.y !== 0 ? "none" : "bubble-float-1 8s ease-in-out infinite",
+                animation: bubblesInflating && !bubble1Popped
+                  ? "bubble-inflate 1.2s ease-out forwards"
+                  : bubble1Popped || drag1.current || bubble1Offset.x !== 0 || bubble1Offset.y !== 0
+                    ? "none"
+                    : "bubble-float-1 8s ease-in-out infinite",
                 transform: `translate(${bubble1Offset.x}px, ${bubble1Offset.y}px)`,
                 ...(bubble1Returning ? { transition: "transform 600ms cubic-bezier(0.34, 1.56, 0.64, 1), opacity 300ms, scale 300ms" } : {}),
               }}
@@ -492,10 +500,14 @@ export default function Home() {
             </div>
             <div
               className={`pointer-events-auto select-none absolute bottom-12 right-[120px] w-[180px] cursor-grab active:cursor-grabbing md:right-[160px] md:w-[220px] lg:right-[200px] lg:w-[250px] ${
-                bubble2Popped ? "scale-0 opacity-0 transition-all duration-300" : "scale-100 opacity-100 transition-all duration-300"
+                bubble2Popped ? "scale-0 opacity-0 transition-all duration-300" : !bubblesInflated && !bubblesInflating ? "scale-0 opacity-0" : "opacity-100 transition-all duration-300"
               } ${bubble2Returning ? "transition-[transform,opacity] duration-[600ms] ease-out" : ""}`}
               style={{
-                animation: bubble2Popped || drag2.current || bubble2Offset.x !== 0 || bubble2Offset.y !== 0 ? "none" : "bubble-float-2 10s ease-in-out infinite",
+                animation: bubblesInflating && !bubble2Popped
+                  ? "bubble-inflate 1.2s ease-out forwards"
+                  : bubble2Popped || drag2.current || bubble2Offset.x !== 0 || bubble2Offset.y !== 0
+                    ? "none"
+                    : "bubble-float-2 10s ease-in-out infinite",
                 transform: `translate(${bubble2Offset.x}px, ${bubble2Offset.y}px)`,
                 ...(bubble2Returning ? { transition: "transform 600ms cubic-bezier(0.34, 1.56, 0.64, 1), opacity 300ms, scale 300ms" } : {}),
               }}
