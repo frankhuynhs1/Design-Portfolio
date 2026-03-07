@@ -196,7 +196,7 @@ export default function Navbar() {
                       <div className="flex items-center gap-4">
                         <div className="h-2.5 w-2.5 shrink-0 rounded-full border-2 border-zinc-500" />
                         <div className="flex flex-1 items-baseline justify-between gap-2">
-                          <p className="text-sm font-medium text-zinc-400">Senior Product Designer, Pet Health</p>
+                          <p className="text-sm font-medium text-zinc-400">Senior Product Designer, Chewy Vet Care</p>
                           <span className="shrink-0 text-xs text-zinc-600">Feb 2026 – Present</span>
                         </div>
                       </div>
@@ -210,7 +210,7 @@ export default function Navbar() {
                       <div className="flex items-center gap-4">
                         <div className="h-2.5 w-2.5 shrink-0 rounded-full border-2 border-zinc-500" />
                         <div className="flex flex-1 items-baseline justify-between gap-2">
-                          <p className="text-sm font-medium text-zinc-400">Product Designer, Pet Health</p>
+                          <p className="text-sm font-medium text-zinc-400">Product Designer, Chewy Vet Care</p>
                           <span className="shrink-0 text-xs text-zinc-600">Jan 2025 – Jan 2026</span>
                         </div>
                       </div>
