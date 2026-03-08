@@ -101,7 +101,7 @@ function BubblePopParticles({ x, y, onDone }: { x: number; y: number; onDone: ()
 
 const toolkitItems = [
   { label: "Claude CoWork + ChatGPT", detail: "Discovery" },
-  { label: "Cursor", detail: "Prototyping in code" },
+  { label: "Cursor", detail: "Designing in code" },
   { label: "Dscout + Usertest", detail: "User Research" },
   { label: "Figma", detail: "Micro + divergent explorations" },
 ];
