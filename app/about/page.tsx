@@ -147,8 +147,7 @@ export default function About() {
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[
               "Be stubborn with outcomes, flexible with process",
-              "Tools change but the need for judgment doesn\u2019t",
-              "Build proof before selling the vision",
+              "Tools evolve, but the need for design accountability stays",
             ].map((quote) => (
               <div
                 key={quote}
