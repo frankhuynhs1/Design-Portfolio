@@ -147,11 +147,12 @@ export default function About() {
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[
               "Be stubborn with outcomes, flexible with process",
-              "Tools evolve, but the need for design accountability stays",
+              "Many tools can make the designs. You still have to own it",
+              "Celebrate the learning, not the reaction",
             ].map((quote) => (
               <div
                 key={quote}
-                className="rounded-2xl border border-zinc-700/40 bg-zinc-800/30 px-6 py-8 text-lg font-medium leading-relaxed text-[#f5f5f5]"
+                className="flex items-center rounded-2xl border border-zinc-700/40 bg-zinc-800/30 px-6 py-8 text-lg font-medium leading-relaxed text-[#f5f5f5] min-h-[125px]"
               >
                 {quote}
               </div>
