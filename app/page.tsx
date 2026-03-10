@@ -541,8 +541,9 @@ export default function Home() {
                 </span>
               ))}
             </h1>
-            <ToolkitCycler />
-            <p className="mt-8 max-w-xl text-base sm:text-lg leading-7 text-[#f5f5f5]">
+            {/* Design stack — hidden for now */}
+            {/* <ToolkitCycler /> */}
+            <p className="mt-4 max-w-xl text-base sm:text-lg leading-7 text-[#f5f5f5]">
               6+ years shaping consumer experiences across e-commerce/retail with a focus on driving acquisition, activation, retention, and product growth.
             </p>
             <button
