@@ -35,7 +35,7 @@ const aboutItems = [
   "Enjoys playing League of Legends (except when I lose). Mainly playing ARAM (mayhem) and my favorite champion is Riven!",
   "Other interests include food, cars, plants, shoes, camping, tennis, snowboarding, running, and traveling.",
   "Current obsession is making various cocktails. My favorite is an espresso martini of course. I can thank the drink masters show on Netflix for getting me inspired.",
-  "A newbie runner who is training for half-marathons (probably a tell tale sign that I'm approaching my 30's lol). Convince me that a full one is worth running.",
+  "A newbie runner who is training for a marathon (probably a tell tale sign that I'm approaching my 30's lol).",
 ];
 
 export default function About() {

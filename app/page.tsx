@@ -196,8 +196,8 @@ export default function Home() {
   const [bubblesInflating, setBubblesInflating] = useState(false);
   const [bubble1Hovered, setBubble1Hovered] = useState(false);
   const [bubble2Hovered, setBubble2Hovered] = useState(false);
-  const [wobble1Key, setWobble1Key] = useState(0);
-  const [wobble2Key, setWobble2Key] = useState(0);
+  const wobble1Ref = useRef<HTMLDivElement>(null);
+  const wobble2Ref = useRef<HTMLDivElement>(null);
   const [bubbleHintBubble, setBubbleHintBubble] = useState<1 | 2 | null>(null);
   const bubbleHintSeen = useRef(typeof window !== "undefined" && sessionStorage.getItem("bubbleHintSeen") === "1");
   const [copied, setCopied] = useState(false);
@@ -448,7 +448,7 @@ export default function Home() {
           <div className="absolute inset-0 hidden overflow-visible sm:block">
             <div
               className={`pointer-events-auto select-none absolute -top-4 right-[-120px] w-[180px] cursor-grab active:cursor-grabbing md:right-[-100px] md:w-[220px] lg:right-[-80px] lg:w-[250px] ${
-                bubble1Popped ? "scale-0 opacity-0 transition-all duration-300" : !bubblesInflated && !bubblesInflating ? "scale-0 opacity-0" : "opacity-100 transition-all duration-300"
+                bubble1Popped ? "scale-0 opacity-0 transition-[opacity,scale] duration-300" : !bubblesInflated && !bubblesInflating ? "scale-0 opacity-0" : "opacity-100 transition-[opacity,scale] duration-300"
               } ${bubble1Returning ? "transition-[transform,opacity] duration-[600ms] ease-out" : ""}`}
               style={{
                 animation: bubblesInflating && !bubble1Popped
@@ -461,11 +461,11 @@ export default function Home() {
               }}
               onMouseDown={(e) => handleBubbleDown(e, 1)}
               onClick={(e) => handleBubbleClick(e, 1)}
-              onMouseEnter={() => { setBubble1Hovered(true); setWobble1Key((k) => k + 1); if (!bubbleHintSeen.current) setBubbleHintBubble(1); }}
+              onMouseEnter={() => { setBubble1Hovered(true); if (wobble1Ref.current) { wobble1Ref.current.style.animation = 'none'; wobble1Ref.current.offsetHeight; wobble1Ref.current.style.animation = ''; } if (!bubbleHintSeen.current) setBubbleHintBubble(1); }}
               onMouseLeave={() => { setBubble1Hovered(false); setBubbleHintBubble(null); }}
             >
               <div style={{ animation: bubble1Popped || bubble1Hovered ? "none" : "bubble-breathe 4s ease-in-out infinite" }}>
-                <div key={wobble1Key} style={{ animation: bubble1Hovered ? "bubble-wobble 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97)" : "none" }}>
+                <div ref={wobble1Ref} style={{ animation: bubble1Hovered ? "bubble-wobble 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97)" : "none" }}>
                   <Image
                     src="/bubble1.png"
                     alt=""
@@ -486,7 +486,7 @@ export default function Home() {
             </div>
             <div
               className={`pointer-events-auto select-none absolute bottom-12 right-[120px] w-[180px] cursor-grab active:cursor-grabbing md:right-[160px] md:w-[220px] lg:right-[200px] lg:w-[250px] ${
-                bubble2Popped ? "scale-0 opacity-0 transition-all duration-300" : !bubblesInflated && !bubblesInflating ? "scale-0 opacity-0" : "opacity-100 transition-all duration-300"
+                bubble2Popped ? "scale-0 opacity-0 transition-[opacity,scale] duration-300" : !bubblesInflated && !bubblesInflating ? "scale-0 opacity-0" : "opacity-100 transition-[opacity,scale] duration-300"
               } ${bubble2Returning ? "transition-[transform,opacity] duration-[600ms] ease-out" : ""}`}
               style={{
                 animation: bubblesInflating && !bubble2Popped
@@ -499,11 +499,11 @@ export default function Home() {
               }}
               onMouseDown={(e) => handleBubbleDown(e, 2)}
               onClick={(e) => handleBubbleClick(e, 2)}
-              onMouseEnter={() => { setBubble2Hovered(true); setWobble2Key((k) => k + 1); if (!bubbleHintSeen.current) setBubbleHintBubble(2); }}
+              onMouseEnter={() => { setBubble2Hovered(true); if (wobble2Ref.current) { wobble2Ref.current.style.animation = 'none'; wobble2Ref.current.offsetHeight; wobble2Ref.current.style.animation = ''; } if (!bubbleHintSeen.current) setBubbleHintBubble(2); }}
               onMouseLeave={() => { setBubble2Hovered(false); setBubbleHintBubble(null); }}
             >
               <div style={{ animation: bubble2Popped || bubble2Hovered ? "none" : "bubble-breathe 4.5s ease-in-out infinite" }}>
-                <div key={wobble2Key} style={{ animation: bubble2Hovered ? "bubble-wobble 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97)" : "none" }}>
+                <div ref={wobble2Ref} style={{ animation: bubble2Hovered ? "bubble-wobble 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97)" : "none" }}>
                   <Image
                     src="/bubble2.png"
                     alt=""
