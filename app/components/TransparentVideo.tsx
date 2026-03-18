@@ -85,7 +85,11 @@ export default function TransparentVideo({
   const bg = canvasBg || `rgb(${bgColor[0]},${bgColor[1]},${bgColor[2]})`;
 
   return (
-    <div ref={containerRef} className={className} style={style}>
+    <div
+      ref={containerRef}
+      className={className}
+      style={{ ...style, background: bg, isolation: "isolate" }}
+    >
       {nearViewport && (
         <video
           ref={videoRef}
@@ -96,7 +100,7 @@ export default function TransparentVideo({
           playsInline
           preload="metadata"
           className="rounded-xl"
-          style={{ background: bg }}
+          style={{ mixBlendMode: "lighten" }}
         />
       )}
     </div>
