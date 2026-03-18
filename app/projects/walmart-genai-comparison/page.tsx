@@ -216,8 +216,7 @@ export default function WalmartGenAIComparison() {
             width={5976}
             height={2802}
             className="w-full"
-            quality={100}
-            unoptimized
+            quality={90}
           />
         </div>
       </div>
@@ -314,8 +313,7 @@ export default function WalmartGenAIComparison() {
                   width={1536}
                   height={1024}
                   className="w-full rounded-2xl"
-                  quality={100}
-                  unoptimized
+                  quality={90}
                 />
               </div>
             </div>
@@ -366,7 +364,6 @@ export default function WalmartGenAIComparison() {
                           height={1024}
                           className="w-full"
                           quality={90}
-                          unoptimized
                         />
                       </div>
                       <p className="mt-2 text-center text-xs font-medium text-zinc-400">{card.label}</p>
@@ -495,14 +492,14 @@ export default function WalmartGenAIComparison() {
           </p>
           <div className="mt-8 flex w-full flex-col gap-4 sm:w-[85vw] sm:flex-row sm:items-start sm:gap-1">
             <div className="shrink-0 overflow-hidden rounded-xl">
-              <Image src="/projects/walmart-genai/card-spec.png" alt="Dev handoff card spec" width={1920} height={1080} className="w-full sm:w-[480px]" quality={90} unoptimized />
+              <Image src="/projects/walmart-genai/card-spec.png" alt="Dev handoff card spec" width={1920} height={1080} className="w-full sm:w-[480px]" quality={90} />
             </div>
             <div className="shrink-0 overflow-hidden rounded-xl">
-              <Image src="/projects/walmart-genai/card-nav.png" alt="Dev handoff card navigation" width={1920} height={1080} className="w-full sm:w-[600px]" quality={90} unoptimized />
+              <Image src="/projects/walmart-genai/card-nav.png" alt="Dev handoff card navigation" width={1920} height={1080} className="w-full sm:w-[600px]" quality={90} />
             </div>
           </div>
           <div className="relative left-1/2 -translate-x-1/2 mt-4 w-full sm:w-[75vw] overflow-hidden rounded-xl">
-            <Image src="/projects/walmart-genai/ok.png" alt="Dev handoff overview" width={1920} height={1080} className="w-full" quality={90} unoptimized />
+            <Image src="/projects/walmart-genai/ok.png" alt="Dev handoff overview" width={1920} height={1080} className="w-full" quality={90} />
           </div>
         </section>
 
@@ -532,10 +529,10 @@ export default function WalmartGenAIComparison() {
           </h2>
           <div className="relative left-1/2 -translate-x-1/2 mt-8 flex w-[85vw] flex-col gap-10">
             <div className="overflow-hidden rounded-xl">
-              <Image src="/projects/walmart-genai/desktop-v2.png" alt="Desktop experience" width={1920} height={1080} className="w-full" quality={90} unoptimized />
+              <Image src="/projects/walmart-genai/desktop-v2.png" alt="Desktop experience" width={1920} height={1080} className="w-full" quality={90} />
             </div>
             <div className="overflow-hidden rounded-xl">
-              <Image src="/projects/walmart-genai/cart-v2.png" alt="Cart experience" width={1920} height={1080} className="w-full" quality={90} unoptimized />
+              <Image src="/projects/walmart-genai/cart-v2.png" alt="Cart experience" width={1920} height={1080} className="w-full" quality={90} />
             </div>
           </div>
         </section>

@@ -473,8 +473,7 @@ export default function Home() {
                     height={669}
                     className="w-full select-none pointer-events-none"
                     draggable={false}
-                    quality={100}
-                    unoptimized
+                    quality={90}
                   />
                 </div>
               </div>
@@ -511,8 +510,7 @@ export default function Home() {
                     draggable={false}
                     height={579}
                     className="w-full select-none pointer-events-none"
-                    quality={100}
-                    unoptimized
+                    quality={90}
                   />
                 </div>
               </div>

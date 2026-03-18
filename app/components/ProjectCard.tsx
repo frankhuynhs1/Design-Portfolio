@@ -136,8 +136,8 @@ export default function ProjectCard({
               threshold={30}
               className={`absolute inset-0 h-full w-full ${
                 videoFit === "contain"
-                  ? "[&_canvas]:h-full [&_canvas]:w-full [&_canvas]:object-contain"
-                  : "[&_canvas]:h-full [&_canvas]:w-full [&_canvas]:object-cover"
+                  ? "[&_video]:h-full [&_video]:w-full [&_video]:object-contain"
+                  : "[&_video]:h-full [&_video]:w-full [&_video]:object-cover"
               }`}
               canvasBg={videoFit === "contain" ? "rgb(29,29,30)" : undefined}
               style={videoScale ? { transform: `scale(${videoScale})` } : undefined}
@@ -150,8 +150,7 @@ export default function ProjectCard({
               fill
               className="object-cover"
               sizes={isHighlight ? "280px" : "(max-width: 768px) 100vw, 1200px"}
-              quality={100}
-              unoptimized
+              quality={90}
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center">

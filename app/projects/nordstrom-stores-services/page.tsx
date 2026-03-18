@@ -101,7 +101,7 @@ export default function NordstromStoresServices() {
             ))}
           </div>
           <div className="relative left-1/2 -translate-x-1/2 mt-8 w-[85vw] overflow-hidden rounded-xl">
-            <Image src="/projects/nordstrom-stores/stores.png" alt="Nordstrom Stores & Services overview" width={1920} height={1080} className="w-full" quality={90} unoptimized />
+            <Image src="/projects/nordstrom-stores/stores.png" alt="Nordstrom Stores & Services overview" width={1920} height={1080} className="w-full" quality={90} />
           </div>
         </section>
 
@@ -139,14 +139,14 @@ export default function NordstromStoresServices() {
               <p className="mb-1 text-center text-lg font-bold text-[#f5f5f5]">Low discovery</p>
               <p className="mb-3 text-center text-sm text-[#b3b3b3]">Store info and services are buried</p>
               <div className="overflow-hidden rounded-xl">
-                <Image src="/projects/nordstrom-stores/problem1.png" alt="Customer problem insight 1" width={1920} height={1080} className="w-full" quality={90} unoptimized />
+                <Image src="/projects/nordstrom-stores/problem1.png" alt="Customer problem insight 1" width={1920} height={1080} className="w-full" quality={90} />
               </div>
             </div>
             <div className="group/img2 flex-1">
               <p className="mb-1 text-center text-lg font-bold text-[#f5f5f5]">Dead ends</p>
               <p className="mb-3 text-center text-sm text-[#b3b3b3]">Missing tablestake details and booking options</p>
               <div className="overflow-hidden rounded-xl">
-                <Image src="/projects/nordstrom-stores/problem2.png" alt="Customer problem insight 2" width={1920} height={1080} className="w-full" quality={90} unoptimized />
+                <Image src="/projects/nordstrom-stores/problem2.png" alt="Customer problem insight 2" width={1920} height={1080} className="w-full" quality={90} />
               </div>
             </div>
           </div>
@@ -292,7 +292,7 @@ export default function NordstromStoresServices() {
                 Our goal is to have at least 30% of consumers aware of the services we have to offer.
               </p>
               <div className="mt-6 overflow-hidden rounded-xl">
-                <Image src="/projects/nordstrom-stores/awareness-v4.png" alt="Service awareness data" width={1920} height={1080} className="w-full grayscale" quality={90} unoptimized />
+                <Image src="/projects/nordstrom-stores/awareness-v4.png" alt="Service awareness data" width={1920} height={1080} className="w-full grayscale" quality={90} />
               </div>
             </div>
           </div>
@@ -305,7 +305,7 @@ export default function NordstromStoresServices() {
             We want the customer to feel like they&apos;re being taken care of by a salesperson regardless of channel
           </h2>
           <div className="mt-8 overflow-hidden rounded-xl">
-            <Image src="/projects/nordstrom-stores/laughing.jpeg" alt="Nordstrom customer experience" width={1920} height={1080} className="w-full" quality={90} unoptimized />
+            <Image src="/projects/nordstrom-stores/laughing.jpeg" alt="Nordstrom customer experience" width={1920} height={1080} className="w-full" quality={90} />
           </div>
 
           <div className="mt-12 rounded-2xl bg-[#222222] p-6 sm:p-8">
@@ -508,7 +508,7 @@ export default function NordstromStoresServices() {
           </h2>
 
           <div className="mt-8 overflow-hidden rounded-xl">
-            <Image src="/projects/nordstrom-stores/stores-design.png" alt="Convenience and connection design" width={1920} height={1080} className="w-full" quality={90} unoptimized />
+            <Image src="/projects/nordstrom-stores/stores-design.png" alt="Convenience and connection design" width={1920} height={1080} className="w-full" quality={90} />
           </div>
 
           <div className="mt-14 flex flex-col gap-10">
@@ -518,7 +518,7 @@ export default function NordstromStoresServices() {
                 Our long term goal for the new tab will be to provide convenience for our customers. Customers want to engage with their pickup and purchase experience to be efficient and convenient.
               </p>
               <div className="mt-6 overflow-hidden rounded-xl sm:relative sm:left-1/2 sm:w-[75vw] sm:-translate-x-1/2">
-                <Image src="/projects/nordstrom-stores/next.png" alt="Pickup experience next steps" width={1920} height={1080} className="w-full" quality={90} unoptimized />
+                <Image src="/projects/nordstrom-stores/next.png" alt="Pickup experience next steps" width={1920} height={1080} className="w-full" quality={90} />
               </div>
             </div>
             <div>
@@ -528,10 +528,10 @@ export default function NordstromStoresServices() {
               </p>
               <div className="mt-6 flex flex-col gap-4 sm:relative sm:left-1/2 sm:w-[75vw] sm:-translate-x-1/2">
                 <div className="overflow-hidden rounded-xl">
-                  <Image src="/projects/nordstrom-stores/next2.png" alt="Services and brand connection 1" width={1920} height={1080} className="w-full" quality={90} unoptimized />
+                  <Image src="/projects/nordstrom-stores/next2.png" alt="Services and brand connection 1" width={1920} height={1080} className="w-full" quality={90} />
                 </div>
                 <div className="overflow-hidden rounded-xl">
-                  <Image src="/projects/nordstrom-stores/next3.png" alt="Services and brand connection 2" width={1920} height={1080} className="w-full" quality={90} unoptimized />
+                  <Image src="/projects/nordstrom-stores/next3.png" alt="Services and brand connection 2" width={1920} height={1080} className="w-full" quality={90} />
                 </div>
               </div>
             </div>
