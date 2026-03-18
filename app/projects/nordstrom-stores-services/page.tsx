@@ -593,7 +593,7 @@ export default function NordstromStoresServices() {
               href="/projects/walmart-genai-comparison"
               tags={["Walmart • 2024"]}
               metrics={["↑ 2.6% add to cart / visitor", "↑ 1.1% first time buyer conversion", "↓ 1.8% session cart removal", "↑ 12.8% re-engagement"]}
-              videoSrc="/highlights/comparison-walkthrough.mov"
+              videoSrc="/highlights/comparison-walkthrough.mp4"
               variant="featured"
             />
           </div>

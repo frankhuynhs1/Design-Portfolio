@@ -146,10 +146,10 @@ function ToolkitCycler() {
 }
 
 const recentProjects: { title: string; tags: string[]; imageSrc?: string; videoSrc?: string; videoScale?: number }[] = [
-  { title: "Metro/City Landing Pages", tags: ["Chewy • 2026"], videoSrc: "/highlights/metro-pages-mobile.mov" },
-  { title: "Drop-off Appointments", tags: ["Chewy • 2026"], videoSrc: "/highlights/dropoff-cross-metro.mov" },
-  { title: "Pet Portal Records", tags: ["Chewy • 2025"], videoSrc: "/highlights/records.mov", videoScale: 0.97 },
-  { title: "See Similar", tags: ["Walmart • 2024"], videoSrc: "/highlights/see-similar.mov" },
+  { title: "Metro/City Landing Pages", tags: ["Chewy • 2026"], videoSrc: "/highlights/metro-pages-mobile.mp4" },
+  { title: "Drop-off Appointments", tags: ["Chewy • 2026"], videoSrc: "/highlights/dropoff-cross-metro.mp4" },
+  { title: "Pet Portal Records", tags: ["Chewy • 2025"], videoSrc: "/highlights/records.mp4", videoScale: 0.97 },
+  { title: "See Similar", tags: ["Walmart • 2024"], videoSrc: "/highlights/see-similar.mp4" },
 ];
 
 const featuredProjects = [
@@ -163,7 +163,7 @@ const featuredProjects = [
       "↓ 1.8% session cart removal",
       "↑ 12.8% re-engagement",
     ],
-    videoSrc: "/highlights/comparison-walkthrough.mov",
+    videoSrc: "/highlights/comparison-walkthrough.mp4",
   },
   {
     title: "Stores & Services",
@@ -174,7 +174,7 @@ const featuredProjects = [
       "↑ 24k new alteration users (1 mo after launch)",
       "↑ $1.4M EBIT profitability over the year",
     ],
-    videoSrc: "/highlights/stores-services.mov",
+    videoSrc: "/highlights/stores-services.mp4",
   },
 ];
 

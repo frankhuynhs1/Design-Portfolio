@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface TransparentVideoProps {
   src: string;
@@ -108,22 +108,41 @@ export default function TransparentVideo({
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const animRef = useRef<number>(0);
-  const visibleRef = useRef(true);
+  const visibleRef = useRef(false);
   const glRef = useRef<ReturnType<typeof initGL>>(null);
   const playingRef = useRef(playing);
   playingRef.current = playing;
+  const [nearViewport, setNearViewport] = useState(false);
 
   useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const lazyObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setNearViewport(true);
+          lazyObserver.disconnect();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+    lazyObserver.observe(container);
+    return () => lazyObserver.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!nearViewport) return;
     const video = videoRef.current;
     const canvas = canvasRef.current;
     const container = containerRef.current;
     if (!video || !canvas || !container) return;
 
-    const observer = new IntersectionObserver(
+    const visObserver = new IntersectionObserver(
       ([entry]) => { visibleRef.current = entry.isIntersecting; },
       { threshold: 0 }
     );
-    observer.observe(container);
+    visObserver.observe(container);
 
     function draw() {
       animRef.current = requestAnimationFrame(draw);
@@ -135,8 +154,12 @@ export default function TransparentVideo({
         return;
       }
 
+      if (!visibleRef.current) {
+        if (!video.paused) video.pause();
+        return;
+      }
+
       if (video.paused) { video.play().catch(() => {}); return; }
-      if (!visibleRef.current) return;
 
       if (!glRef.current) {
         glRef.current = initGL(canvas);
@@ -170,26 +193,28 @@ export default function TransparentVideo({
     if (video.readyState >= 2) start();
 
     return () => {
-      observer.disconnect();
+      visObserver.disconnect();
       video.removeEventListener("loadeddata", start);
       video.removeEventListener("play", start);
       cancelAnimationFrame(animRef.current);
     };
-  }, [bgColor, threshold, transparent]);
+  }, [nearViewport, bgColor, threshold, transparent]);
 
   return (
     <div ref={containerRef} className={className} style={style}>
-      <video
-        ref={videoRef}
-        src={src}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        className="absolute opacity-0 pointer-events-none"
-        style={{ width: 0, height: 0 }}
-      />
+      {nearViewport && (
+        <video
+          ref={videoRef}
+          src={src}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="absolute opacity-0 pointer-events-none"
+          style={{ width: 0, height: 0 }}
+        />
+      )}
       <canvas ref={canvasRef} className="rounded-xl" style={{ background: canvasBg || "transparent" }} />
     </div>
   );

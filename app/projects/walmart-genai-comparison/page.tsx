@@ -578,7 +578,7 @@ export default function WalmartGenAIComparison() {
               href="/projects/nordstrom-stores-services"
               tags={["Nordstrom • 2023"]}
               metrics={["↑ 1.6% conversion", "↑ 24k new alteration users (1 mo after launch)", "↑ $1.4M EBIT profitability over the year"]}
-              videoSrc="/highlights/stores-services.mov"
+              videoSrc="/highlights/stores-services.mp4"
               variant="featured"
             />
           </div>
