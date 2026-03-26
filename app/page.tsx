@@ -542,7 +542,7 @@ export default function Home() {
             {/* Design stack — hidden for now */}
             {/* <ToolkitCycler /> */}
             <p className="mt-4 max-w-xl text-base sm:text-lg leading-7 text-[#f5f5f5]">
-              6+ years shaping consumer experiences across e-commerce/retail with a focus on driving acquisition, activation, retention, and product growth.
+              6+ years shaping consumer experiences across e-commerce/retail with a focus on driving product growth (acquisition, retention, engagement).
             </p>
             <button
               onClick={() => {
@@ -817,17 +817,6 @@ export default function Home() {
 
       <footer className="relative z-10 -mt-2 border-t border-zinc-800 py-6 sm:-mt-2 sm:py-8">
         <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8 text-center">
-          <p className="group/credits mb-1.5 text-xs text-[#555]">
-            {"Created using Cursor and Claude".split("").map((char, i) => (
-              <span
-                key={i}
-                className="inline-block transition-colors duration-300 group-hover/credits:animate-[letter-rainbow_1.5s_ease-in-out_infinite]"
-                style={{ animationDelay: `${i * 0.05}s` }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </span>
-            ))}
-          </p>
           <p className="text-base sm:text-lg text-[#b3b3b3]">Like what you see?</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl md:text-5xl">
             Drop me a line!

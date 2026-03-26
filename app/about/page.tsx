@@ -122,7 +122,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="shrink-0 pt-12 sm:pt-16 sm:w-[430px] md:pt-20">
+            <div className="shrink-0 pt-12 mx-auto w-full max-w-[360px] sm:pt-16 sm:max-w-[420px] md:max-w-[430px] md:pt-20">
               <div className="rotate-2 rounded-2xl bg-[#2a2a2a] p-3 pb-14 shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-transform duration-300 hover:-rotate-1">
                 <div className="overflow-hidden rounded-xl">
                   <Image
@@ -147,12 +147,12 @@ export default function About() {
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[
               "Be stubborn with outcomes, flexible with process",
-              "Many tools can make the designs. You still have to own it",
-              "Celebrate the learning, not the reaction",
+              "The more automated design becomes, the more important the thinking",
+              "Every bad design teaches you something a good one couldn't",
             ].map((quote) => (
               <div
                 key={quote}
-                className="flex items-center rounded-2xl border border-zinc-700/40 bg-zinc-800/30 px-6 py-8 text-lg font-medium leading-relaxed text-[#f5f5f5] min-h-[125px]"
+                className="flex items-center justify-start text-left lg:justify-center lg:text-center rounded-2xl border border-zinc-700/40 bg-zinc-800/30 px-6 py-8 text-lg font-medium leading-relaxed text-[#f5f5f5] min-h-[125px]"
               >
                 {quote}
               </div>

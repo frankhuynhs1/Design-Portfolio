@@ -300,10 +300,10 @@ export default function WalmartGenAIComparison() {
             Walmart customers find it difficult to compare products and make a decision online, especially for high-consideration items (priced at $100 or above).
           </p>
 
-          <div className="mt-14 flex flex-col gap-10">
+          <div className="mt-16 flex flex-col gap-10">
             <div>
               <h3 className="text-2xl font-bold text-[#f5f5f5] sm:text-3xl">Additionally, high consideration items make up 45% of shopping sessions across platforms</h3>
-              <p className="mt-3 text-base leading-7 text-[#b3b3b3]">
+              <p className="mt-4 text-base leading-7 text-[#b3b3b3]">
                 Along with benchmarking studies and voice of the customer feedback, we&apos;ve seen comparing details between products being a huge pain point for customers.
               </p>
               <div className="mt-8">
@@ -319,7 +319,7 @@ export default function WalmartGenAIComparison() {
             </div>
             <div>
               <h3 className="text-2xl font-bold text-[#f5f5f5] sm:text-3xl">Other competitors have a more dedicated way to store items on Search and compare</h3>
-              <p className="mt-3 text-base leading-7 text-[#b3b3b3]">
+              <p className="mt-4 text-base leading-7 text-[#b3b3b3]">
                 We are lagging behind many competitors, who offer an easier way for their customers to compare items across many different categories.
               </p>
 

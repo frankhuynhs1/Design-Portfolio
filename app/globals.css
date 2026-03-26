@@ -28,24 +28,42 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("/fonts/AnthropicSans-Roman-Web.woff2") format("woff2");
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #191919;
   --foreground: #fafafa;
   --font-product-sans: "Product Sans", system-ui, sans-serif;
+  --font-anthropic-sans: "Anthropic Sans", "Product Sans", system-ui, sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-product-sans);
-  --font-mono: var(--font-product-sans);
+  --font-sans: var(--font-anthropic-sans);
+  --font-mono: var(--font-anthropic-sans);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-product-sans);
+  font-family: var(--font-anthropic-sans);
   cursor: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-anthropic-sans);
 }
 
 *, *::before, *::after {
