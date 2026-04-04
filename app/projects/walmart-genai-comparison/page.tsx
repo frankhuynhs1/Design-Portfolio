@@ -324,7 +324,7 @@ export default function WalmartGenAIComparison() {
               </p>
 
               {/* Competitor Screenshots - Horizontal Carousel */}
-              <div className="relative -mx-5 mt-12 sm:-mx-6 lg:-mx-8">
+              <div className="relative -mx-5 mt-6 sm:-mx-6 lg:-mx-8">
                 {canScrollCompLeft && (
                   <button
                     onClick={() => { const el = compScrollRef.current; if (el) el.scrollBy({ left: -el.clientWidth * 0.6, behavior: "smooth" }); }}

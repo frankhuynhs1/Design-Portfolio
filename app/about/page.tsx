@@ -144,10 +144,9 @@ export default function About() {
           <h2 className="text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl md:text-5xl">
             What I believe
           </h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {[
               "Be stubborn with outcomes, flexible with process",
-              "The more automated design becomes, the more important the thinking",
               "Every bad design teaches you something a good one couldn't",
             ].map((quote) => (
               <div

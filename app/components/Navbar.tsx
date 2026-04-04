@@ -174,8 +174,12 @@ export default function Navbar() {
                 <h2 className="text-2xl font-bold text-[#f5f5f5] sm:text-3xl">Franklin Huynh</h2>
                 <p className="mt-1 text-base text-zinc-400">Product Designer</p>
                 <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-zinc-500">
+                  <a href="https://www.franklinhuynh.com" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors">
+                    franklinhuynh.com
+                  </a>
                   <a href="mailto:frankhuynhs@gmail.com" className="hover:text-zinc-300 transition-colors">frankhuynhs@gmail.com</a>
                   <a href="https://www.linkedin.com/in/huynhfranklin/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors">/in/huynhfranklin</a>
+                  <a href="tel:+12533553311" className="hover:text-zinc-300 transition-colors">(253) 355-3311</a>
                 </div>
                 <p className="mt-3 text-base leading-relaxed text-zinc-400">
                   6+ years shaping consumer experiences across e-commerce and retail with a focus on driving acquisition, activation, retention, and product growth across web and app.
@@ -192,30 +196,32 @@ export default function Navbar() {
                       <p className="text-base font-bold text-[#f5f5f5]">Chewy</p>
                       <span className="shrink-0 text-sm text-zinc-500">Jan 2025 – Present</span>
                     </div>
-                    <div className="mt-3">
-                      <div className="flex items-center gap-4">
-                        <div className="h-2.5 w-2.5 shrink-0 rounded-full border-2 border-zinc-500" />
-                        <div className="flex flex-1 items-baseline justify-between gap-2">
-                          <p className="text-sm font-medium text-zinc-400">Senior Product Designer, Chewy Vet Care</p>
-                          <span className="shrink-0 text-xs text-zinc-600">Feb 2026 – Present</span>
+                    <div className="mt-3 space-y-5">
+                      <div>
+                        <div className="flex flex-wrap items-baseline justify-between gap-2">
+                          <p className="text-sm font-medium text-zinc-400">Senior Product Designer, Storefront Pharmacy</p>
+                          <span className="shrink-0 text-xs text-zinc-600">Apr 2026 – Present</span>
                         </div>
-                      </div>
-                      <div className="ml-[4.5px] border-l border-zinc-700 py-2 pl-[19.5px]">
-                        <ul className="list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
-                          <li>Owning end-to-end design strategy for acquisition, activation, and retention for Chewy Vet Care. Key surfaces include pet portal, scheduling, landing pages, post-appointment, and lifecycle touch-points (marketing campaigns, SEO, email, push, in-app).</li>
-                          <li>Launched metro/city landing pages to improve SEO and enable targeted marketing campaigns, driving +4.2% first time scheduling conversion lift and improved organic search rankings across short and long-tail queries for vet clinics.</li>
+                        <ul className="mt-1.5 list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
+                          <li>
+                            Leading strategy and execution of experiences that shape how customers discover, evaluate, and commit to prescription and vet diet subscriptions while evolving the promotional systems that drive activation, retention, and long-term value. Key surfaces include: home, browse, PDP, cart, checkout, post-order, pet portal, and lifecycle touch-points (email, push, in-app).
+                          </li>
                         </ul>
                       </div>
-                      <div className="flex items-center gap-4">
-                        <div className="h-2.5 w-2.5 shrink-0 rounded-full border-2 border-zinc-500" />
-                        <div className="flex flex-1 items-baseline justify-between gap-2">
+                      <div>
+                        <div className="flex flex-wrap items-baseline justify-between gap-2">
                           <p className="text-sm font-medium text-zinc-400">Product Designer, Chewy Vet Care</p>
-                          <span className="shrink-0 text-xs text-zinc-600">Jan 2025 – Jan 2026</span>
+                          <span className="shrink-0 text-xs text-zinc-600">Jan 2025 – Mar 2026</span>
                         </div>
+                        <ul className="mt-1.5 list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
+                          <li>
+                            Owned end-to-end design strategy for acquisition, activation, and retention for Chewy Vet Care. Key surfaces include pet portal, scheduling, landing pages, post-appointment, and lifecycle touch-points (marketing campaigns, SEO, email, push, in-app).
+                          </li>
+                          <li>
+                            Launched drop-off appointments, patient records, lab results, and marketing landing pages to drive activation, conversion, and retention across Chewy Vet Care.
+                          </li>
+                        </ul>
                       </div>
-                      <ul className="mt-1.5 list-disc space-y-1.5 pl-[40px] text-sm leading-relaxed text-zinc-500">
-                        <li>Led consumer and enterprise design for drop-off appointments – defining logistics, resourcing, and care team workflows to launch self-service online drop-off scheduling that unlocked +2K monthly slots and drove 81% drop-off utilization.</li>
-                      </ul>
                     </div>
                   </div>
 
@@ -247,8 +253,8 @@ export default function Navbar() {
                       </div>
                       <div className="ml-[4.5px] border-l border-zinc-700 py-2 pl-[19.5px]">
                         <ul className="list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
-                          <li>Launched Stores tab on the Nordstrom app, acquiring +24K new customers using our alterations service across Nordstrom and Nordstrom Rack within the first month.</li>
                           <li>Defined and owned design strategy for omni-channel CX, designing across high visibility touch-points such as home page, browse, PDP, checkout, and accounts that drove retention, conversion, and customer lifetime value.</li>
+                          <li>Launched Stores tab on the Nordstrom app, acquiring +24K new customers using our alterations service across Nordstrom and Nordstrom Rack within the first month.</li>
                         </ul>
                       </div>
                       <div className="flex items-center gap-4">
@@ -288,7 +294,7 @@ export default function Navbar() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-zinc-400">Tools</p>
-                    <p className="mt-1 text-sm leading-relaxed text-zinc-500">Figma/Make, Claude (Cowork, Code), ChatGPT, Cursor, FigJam, Protopie, Usertesting.com, Dscout, Jira, Confluence, Pen and Paper</p>
+                    <p className="mt-1 text-sm leading-relaxed text-zinc-500">Figma/Make, Claude (Cowork, Code), ChatGPT &amp; Codex, Cursor, FigJam, Protopie, Usertesting.com, Dscout, Jira, Confluence, Pen and Paper</p>
                   </div>
                   <div>
                     <p className="text-sm font-bold text-zinc-400">Design artifacts</p>
