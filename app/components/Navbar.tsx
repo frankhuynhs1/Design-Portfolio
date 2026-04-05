@@ -179,7 +179,6 @@ export default function Navbar() {
                   </a>
                   <a href="mailto:frankhuynhs@gmail.com" className="hover:text-zinc-300 transition-colors">frankhuynhs@gmail.com</a>
                   <a href="https://www.linkedin.com/in/huynhfranklin/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors">/in/huynhfranklin</a>
-                  <a href="tel:+12533553311" className="hover:text-zinc-300 transition-colors">(253) 355-3311</a>
                 </div>
                 <p className="mt-3 text-base leading-relaxed text-zinc-400">
                   6+ years shaping consumer experiences across e-commerce and retail with a focus on driving acquisition, activation, retention, and product growth across web and app.
@@ -196,32 +195,36 @@ export default function Navbar() {
                       <p className="text-base font-bold text-[#f5f5f5]">Chewy</p>
                       <span className="shrink-0 text-sm text-zinc-500">Jan 2025 – Present</span>
                     </div>
-                    <div className="mt-3 space-y-5">
-                      <div>
-                        <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <div className="mt-3">
+                      <div className="flex items-center gap-4">
+                        <div className="h-2.5 w-2.5 shrink-0 rounded-full border-2 border-zinc-500" />
+                        <div className="flex flex-1 flex-wrap items-baseline justify-between gap-2">
                           <p className="text-sm font-medium text-zinc-400">Senior Product Designer, Storefront Pharmacy</p>
                           <span className="shrink-0 text-xs text-zinc-600">Apr 2026 – Present</span>
                         </div>
-                        <ul className="mt-1.5 list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
+                      </div>
+                      <div className="ml-[4.5px] border-l border-zinc-700 py-2 pl-[19.5px]">
+                        <ul className="list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
                           <li>
                             Leading strategy and execution of experiences that shape how customers discover, evaluate, and commit to prescription and vet diet subscriptions while evolving the promotional systems that drive activation, retention, and long-term value. Key surfaces include: home, browse, PDP, cart, checkout, post-order, pet portal, and lifecycle touch-points (email, push, in-app).
                           </li>
                         </ul>
                       </div>
-                      <div>
-                        <div className="flex flex-wrap items-baseline justify-between gap-2">
+                      <div className="flex items-center gap-4">
+                        <div className="h-2.5 w-2.5 shrink-0 rounded-full border-2 border-zinc-500" />
+                        <div className="flex flex-1 flex-wrap items-baseline justify-between gap-2">
                           <p className="text-sm font-medium text-zinc-400">Product Designer, Chewy Vet Care</p>
                           <span className="shrink-0 text-xs text-zinc-600">Jan 2025 – Mar 2026</span>
                         </div>
-                        <ul className="mt-1.5 list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-500">
-                          <li>
-                            Owned end-to-end design strategy for acquisition, activation, and retention for Chewy Vet Care. Key surfaces include pet portal, scheduling, landing pages, post-appointment, and lifecycle touch-points (marketing campaigns, SEO, email, push, in-app).
-                          </li>
-                          <li>
-                            Launched drop-off appointments, patient records, lab results, and marketing landing pages to drive activation, conversion, and retention across Chewy Vet Care.
-                          </li>
-                        </ul>
                       </div>
+                      <ul className="mt-1.5 list-disc space-y-1.5 pl-[40px] text-sm leading-relaxed text-zinc-500">
+                        <li>
+                          Owned end-to-end design strategy for acquisition, activation, and retention for Chewy Vet Care. Key surfaces include pet portal, scheduling, landing pages, post-appointment, and lifecycle touch-points (marketing campaigns, SEO, email, push, in-app).
+                        </li>
+                        <li>
+                          Launched drop-off appointments, patient records, lab results, and marketing landing pages to drive activation, conversion, and retention across Chewy Vet Care.
+                        </li>
+                      </ul>
                     </div>
                   </div>
 
@@ -329,7 +332,7 @@ export default function Navbar() {
                     <polyline points="7 10 12 15 17 10" />
                     <line x1="12" y1="15" x2="12" y2="3" />
                   </svg>
-                  Download PDF
+                  Download resume
                 </a>
               </div>
             </div>
